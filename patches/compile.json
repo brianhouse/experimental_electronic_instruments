@@ -1,0 +1,27 @@
+{
+   "name": "HelloWorld",
+   "som": "seed",
+   "audio": {
+     "channels": 2
+   },
+
+   "components": {
+       "knob1": {
+           "component": "AnalogControl",
+           "pin": 15
+       },
+       "toggle1": {
+           "component": "Switch",
+           "pin": 16
+       },
+       "button1": {
+           "component": "Switch",
+           "pin": 17
+       },
+       "led1": {
+           "component": "Led",
+           "pin": 14
+       }
+
+   }
+}
