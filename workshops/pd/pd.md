@@ -1,4 +1,4 @@
-## Pure Data / plugdata = Pd
+## Pure Data → plugdata → Pd
 
 There are many ways that artists and musicians have produced electronic sound, from hardware modular synthesizers like those produced by Moog and Buchla to software platforms like Ableton or MainStage.
 
@@ -123,7 +123,9 @@ Add an object box to a new patch, and type `ac/osc~ sin`. This is a sine-wave os
   <img src="media/osc.png" width=400 /><br />
 </p>
 
-Next, connect a `number` box upstream to both inlets of an `ac/output~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish audio connections from control connections by their dashed lines. `ac/output~` is a digital analog converter—it will make our signal into sound. It has a volume control, a mute button, and it also lets you record a wave file: click the checkbox on to start recording, and again to turn it off (note that you will see warnings on the side that `writesf~` and `savepanel` are not supported in Compiled Mode—this is ok for our purposes).
+Next, connect a `number` box upstream to both inlets of an `ac/output~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish audio connections from control connections by their dashed lines, and audio inlets and outlets are orange instead of blue.
+
+`ac/output~` is a digital analog converter—it will make our signal into sound. It has a volume control, a mute button, and it also lets you record a wave file: click the checkbox on to start recording, and again to turn it off (note that you will see warnings on the side that `writesf~` and `savepanel` are not supported in Compiled Mode—this is ok for our purposes).
 
 Now, in playback mode, increase the value of the `number` box to 300 or so, and you should hear a "pure" synthesized tone.
 
@@ -151,10 +153,23 @@ If you click the `slider`, you will see a panel that sets various properties. Se
 
 Congratulations, you've made your first synthesizer! (Now make sure to save it).
 
+
+## `loadbang`
+
+In general, remember to **SAVE YOUR WORK**
+
+...but note that the numbers in your boxes aren't saved with the patch! If you find a combination you like, supply them as default values for each of the oscillators, or put them in messages that you can click or bang to restore the values.
+
+One very helpful object for this is called `loadbang`—it sends a bang when the patch is loaded. Attach this to a message to set a value.
+
+<p align="center">
+  <img src="media/loadbang.png" width=400 /><br />
+</p>
+
+
 ## Figuring things out as you go
 
 Some notes on finding your way around:
 - hover your cursor over the inlets and outlets of objects to get info on what they do
-- orange inlets and outlets accept signals—blue are control messages only
 - try Option-clicking on an object—if you're in playback mode, it may open up a patch that shows the _contents_ of the object (objects are made of other objects!)
 - Option-clicking while you're in edit mode may open up a helpfile that explains how to use the object

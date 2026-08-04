@@ -109,21 +109,3 @@ Notice how we can use `rescale~` (and `rescale`) to change the 0 to 1 range of a
 
 
 
-# move to Pd
-
-## Saving and loading
-
-**SAVE YOUR WORK** Pd does nothing for you in the way of automatically saving things, and it is prone to crash (never set a font to size 0, for instance).
-
-...but note that the numbers in your boxes aren't saved with the patch! If you find a combination you like, supply them as default values for each of the oscillators, or put them in messages that you can click or bang to restore the values.
-
-One very helpful object for this is called `loadbang`—it sends a bang when the patch is loaded. Attach this to a message to set a value.
-
-<p align="center">
-  <img src="media/06_14_loadbang.png" width=600 /><br />
-</p>
-
-
-comments
-
-
