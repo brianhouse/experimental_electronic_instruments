@@ -1,5 +1,8 @@
 # Synthesis
 
+Let's explore how to create waveforms with Pd.
+
+
 ## Oscillators
 
 All synthesis starts with oscillators. `ac/osc~` is a perfect sine wave that oscillates between -1 and 1. We can also write it as `ac/osc~ sin`. However, there are other shapes that we can use: try `ac/osc~ tri`, `ac/osc~ saw`, `ac/osc~ sqr` in your patch and play with the results.
