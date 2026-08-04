@@ -43,7 +43,7 @@ A blank patch is both intimidating and filled with possibility. Type Command/Con
   <img src="media/placement_1.png" width=300 /><br />
 </p>
 
-Objects are the "vocabulary" of Pd. As you learn the names of objects, you will be able to make patches with more complexity. If you type the word "print" inside this object and click again outside the box, you will create the [print] object.
+Objects are the "vocabulary" of Pd. As you learn the names of objects, you will be able to make patches with more complexity. If you type the word "print" inside this object and click again outside the box, you will create the `print` object.
 
 Next, let's create a Number using Command/Control-3. Put it above `print`. Note that it has a little wedge in the corner that distinguishes it as a number box.
 
@@ -54,7 +54,7 @@ Next, let's create a Number using Command/Control-3. Put it above `print`. Note 
 
 ### Connections
 
-Note the blue tabs on the boxes, one on the top of `print` and one each on the top and bottom of `number`. These are connection points. If you put your cursor over the bottom "outlet" of the Number box, you can click and drag it to the "inlet" on the top of `print` to make a connection.
+Note the blue tabs on the boxes, one on the top of `print` and one each on the top and bottom of the `number` box. These are connection points. If you put your cursor over the bottom "outlet" of the Number box, you can click and drag it to the "inlet" on the top of `print` to make a connection.
 
 <p align="center">
   <img src="media/placement_3.png" width=300 /><br />
@@ -71,15 +71,15 @@ Once you're in playback mode, click on the Number box and drag your mouse up and
   <img src="media/placement_4.png" width=300 /><br />
 </p>
 
-This simple setup demonstrates the fundamental way that Pd and all control flow programs work. The number produced by the number box as it is moved up and down is sent through the connection to `print`, which displays it in the log.
+This simple setup demonstrates the fundamental way that Pd and all control flow programs work. The number produced by the `number` as it is moved up and down is sent through the connection to `print`, which displays it in the log.
 
-Now, make a Message using Command/Control-2. Messages can be numbers, or they can be text ("symbols"), but they can't be changed with the mouse like Numbers can. Once again, Messages are distinguished from other types of boxes by a different shape on the right. Attach it to print, switch from edit mode to playback mode, click it, and look at the log.
+Now, make a Message using Command/Control-2. Messages can be numbers, or they can be text ("symbols"), but they can't be changed with the mouse like `numbers` can. Once again, Messages are distinguished from other types of boxes by a different shape on the right. Attach it to print, switch from edit mode to playback mode, click it, and look at the log.
 
 <p align="center">
   <img src="media/placement_5.png" width=400 /><br />
 </p>
 
-Beyond these basic types, look for the add object icon at the top of the window—this includes some interface elements. Foremost among these is the "bang" -- select it from the menu, and then move it around on the screen. Connect it to the inlets on both the Number box and the Message box:
+Beyond these basic types, look for the add object icon at the top of the window—this includes some interface elements. Foremost among these is the `bang` -- select it from the menu, and then move it around on the screen. Connect it to the inlets on both the Number box and the Message box:
 
 <p align="center">
   <img src="media/object_browser.png" width=400 /><br />
@@ -91,11 +91,11 @@ Beyond these basic types, look for the add object icon at the top of the window�
 
 In playback mode, clicking on the "bang" will send both the number and the "hello world" message to `print`, and hence to the log.
 
-You can think of bangs, numbers, and messages as  discrete pieces of data that travel once along the connections only when they are triggered. These are all understood as "control messages" in Pd parlance.
+You can think of `bangs`, `numbers`, and messages as discrete pieces of data that travel once along the connections only when they are triggered. These are all understood as "control messages" in Pd parlance.
 
 Change into edit mode, drag a rectangle around all your objects, and hit delete—now we once again have a blank patch. Make a `bang` connected to two Number boxes, connect each of those to a `+` box (by typing "+" into an empty object), and finally connect that to another Number.
 
-In playback mode, enter some numbers into the top two Number boxes, and hit the bang, you'll see the result. This demonstrates how data flows downward and can be operated upon along the way.
+In playback mode, enter some numbers into the top two `number` boxes, and hit the bang, you'll see the result. This demonstrates how data flows downward and can be operated upon along the way.
 
 
 <p align="center">
@@ -103,7 +103,7 @@ In playback mode, enter some numbers into the top two Number boxes, and hit the 
 </p>
 
 
-Note that if you change the number in the left Number box, the result updates, but not if you change the number in the right Number box. In Pd, only a change or a bang in the left inlet triggers the operation.
+Note that if you change the number in the left `number` box, the result updates, but not if you change the number in the right `number` box. In Pd, only a change or a bang in the left inlet triggers the operation.
 
 Instead of always using both inlets, you can add a default value as a parameter of operator objects like `+` and `*`:
 
@@ -117,15 +117,15 @@ Audio signals flow a little differently than messages, because they are continuo
 
 What is an audio object? We know that an object handles audio if its name ends in a tilde ("~").
 
-Add an object box to a new patch, and type `osc~`. This is a sine-wave oscillator.
+Add an object box to a new patch, and type `ac/osc~ sin`. This is a sine-wave oscillator.
 
 <p align="center">
   <img src="media/osc.png" width=400 /><br />
 </p>
 
-Next, connect a number box upstream to both inlets of an `ac/output~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish audio connections from control connections by their dashed lines. `ac/output~` is a digital analog converter—it will make our signal into sound. It has a volume control, a mute button, and it also lets you record a wave file: click the checkbox on to start recording, and again to turn it off (note that you will see warnings on the side that `writesf~` and `savepanel` are not supported in Compiled Mode—this is ok for our purposes).
+Next, connect a `number` box upstream to both inlets of an `ac/output~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish audio connections from control connections by their dashed lines. `ac/output~` is a digital analog converter—it will make our signal into sound. It has a volume control, a mute button, and it also lets you record a wave file: click the checkbox on to start recording, and again to turn it off (note that you will see warnings on the side that `writesf~` and `savepanel` are not supported in Compiled Mode—this is ok for our purposes).
 
-Now, in playback mode, increase the value of the number box to 300 or so, and you should hear a "pure" synthesized tone.
+Now, in playback mode, increase the value of the `number` box to 300 or so, and you should hear a "pure" synthesized tone.
 
 <p align="center">
   <img src="media/output.png" width=400 /><br />
@@ -139,9 +139,11 @@ You may have to arrange things a bit to get everything to fit. Switch into playb
   <img src="media/scope.png" width=600 /><br />
 </p>
 
-One final addition, use the object panel to add a horizontal slider leading into the Number box to make it easier to control.
+Note that we are working with digital audio—our signal is a series of samples between -1 and 1 that map to the movement of our speaker in a directly analogous way.
 
-If you click the slider, you will see a panel that sets various properties. Set the range of the slider to 50–1000, which is a reasonable range for the fundamental frequencies that we might want to hear. Change the "lin" parameter to "log" -- frequency works logarithmically, and we want the slider to reflect that.
+One final addition, use the object panel to add a horizontal `slider` leading into the Number box to make it easier to control.
+
+If you click the `slider`, you will see a panel that sets various properties. Set the range of the `slider` to 50–1000, which is a reasonable range for the fundamental frequencies that we might want to hear. Change the "lin" parameter to "log"—frequency works logarithmically, and we want the `slider` to reflect that.
 
 <p align="center">
   <img src="media/properties.png" width=600 /><br />
@@ -149,6 +151,10 @@ If you click the slider, you will see a panel that sets various properties. Set 
 
 Congratulations, you've made your first synthesizer! (Now make sure to save it).
 
-## Seeing how the sausage is made
+## Figuring things out as you go
 
-One final note: try Option-clicking on an object. If you're in playback mode, it may open up a patch that shows the _contents_ of the object—objects are made of other objects! If you're in edit mode, it may open up a helpfile that explains how to use it. These two features are very valuable as you get comfortable with how Pd works.
+Some notes on finding your way around:
+- hover your cursor over the inlets and outlets of objects to get info on what they do
+- orange inlets and outlets accept signals—blue are control messages only
+- try Option-clicking on an object—if you're in playback mode, it may open up a patch that shows the _contents_ of the object (objects are made of other objects!)
+- Option-clicking while you're in edit mode may open up a helpfile that explains how to use the object

@@ -85,20 +85,21 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 #### Monday 9/7
 - Workshop: Noise boxes
+- Project for next class: [Noise Boxes](projects/noise_boxes.md)
 
 #### Wednesday 9/9
-- Finish and listen to noise boxes
+- Finish and listen to Noise Boxes
  
 
 ### Week 3
 
 #### Monday 9/14
-- Workshop: Introduction to Pd
-- Workshop: Synthesis
+- Workshop: [Introduction to Pd](workshops/pd/pd.md)
+- Workshop: [Synthesis](workshops/pd/synthesis.md)
 
 
 #### Wednesday 9/16
-- Workshop: Envelopes, filters, and distortion
+- Workshop: [Envelopes](workshops/pd/envelopes.md)
 - Exercise for next class: [Sound Design](exercises/sound_design.md)
  
 

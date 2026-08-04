@@ -1,5 +1,5 @@
 amps
-
+https://www.amazon.com/dp/B08V8B3C93?lv=shuf&channelId=500&plpRedirect=mhFallback&th=1
 /
 
 assorted springs
@@ -14,6 +14,9 @@ Threaded rod + a nut you run along it; zippers; cheese graters; files/rasps; cor
 Rice, dried beans, BBs, ball bearings, small beads sealed inside compartments.
 
 can I gift students funds to go to Hamshaw?
+
+
+I will reimburse you for materials from Hamshaw (the hardware store across the street) up to ~$20 (with receipt).
 
 
 /

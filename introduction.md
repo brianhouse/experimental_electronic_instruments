@@ -22,3 +22,5 @@ Fair warning: I'm also new to Pd (I work in Max if I need to use a control-flow 
 
 
 note about checking out headphones
+
+not sure what to call this class

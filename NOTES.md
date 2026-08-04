@@ -76,3 +76,15 @@ https://learn.adafruit.com/adafruit-powerboost-1000c-load-share-usb-charge-boost
 the dial
 the button
 the resistance sensor
+
+
+/
+
+fundamental sound concepts
+
+timbre
+frequency
+harmonics / spectrograms / harmonic series
+
+
+http://write.flossmanuals.net/pure-data/introduction2/
