@@ -108,7 +108,7 @@ Note that this becomes a branching process: any number box can be replaced with 
   <img src="media/complex.png" width=800 /><br />
 </p>
 
-Notice how we can use `rescale~` (and `rescale`) to change the 0 to 1 range of an LFO to an arbitrary range, like 150 to 350.
+Notice how we can use `freqscale~` to change the 0 to 1 range of an LFO to an arbitrary range of frequencies, in this case 150–350 and 500–2000. `freqscale~` uses a logarithmic scale, because we perceive doubling of a frequency as a linear change of one octave.
 
 
 

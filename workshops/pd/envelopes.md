@@ -38,8 +38,29 @@ But by multiplying some oscillating signal with the `ac/adsr~` signal, we can pr
 
 ## Filter envelopes
 
-Another common use for an envelope is to control the rolloff frequency of a filter. In this example, we're rescaling the 0-1 range of the envelope to a frequency range of our choosing. 
+Another common use for an envelope is to control the rolloff frequency of a filter. In this example, we're using `freqscale~` to rescale the 0-1 range of the envelope to a frequency range of our choosing. This results in a filter sweep over the static tone. 
 
 <p align="center">
   <img src="media/eg_filter.png" width=800 /><br />
 </p>
+
+For this, you'll want to have a wave with lots of harmonics like a saw or square wave (or something more complex) as opposed to a sine wave, which won't have much to filter out.
+
+
+## Sound design with envelopes
+
+The classic setup that hardware synthesizers use for sound design has three stages:
+
+1. **OSCILLATOR STAGE** Create an interesting waveform by combining oscillators
+2. **FILTER STAGE** Apply an enveloped filter to change the timbre over time
+3. **AMPLIFIER STAGE** Shape the sound with tremolo, an amplitude envelope, and any added make-up gain
+
+<p align="center">
+  <img src="media/sound_design.png" width=800 /><br />
+</p>
+
+Each of these sections can be as simple or elaborate as you want it to be, and of course you by no means have to organize things in this way. To some extent, this design was motivated by hardware constraints that we don't have in Pd. That said, having a conceptually organized approach like this can be very helpful.
+
+
+One detail: note that we reset the phase of the LFO when the note is triggered. This syncronizes the the tremolo with the beginning of the envelope.
+
