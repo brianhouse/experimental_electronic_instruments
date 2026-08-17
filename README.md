@@ -85,7 +85,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 #### Monday 9/7
 - Workshop: Noise boxes
-- Project for next class: [Noise Boxes](projects/noise_boxes.md)
+- Project for next class: [Noise Boxes](projects/noise_box.md)
 
 #### Wednesday 9/9
 - Finish and listen to Noise Boxes

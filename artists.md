@@ -6,7 +6,7 @@
 - Michel Waisvisz, "Cracklebox" (1975)
 - David Rokeby, "Very Nervous System" (1982–1991)
 - Rafael Lozano-Hemmer, "Pulse Room" (2006)
-- Jeff Mills, "TR-909" (See Exhibitionist Mix #3) (1983)
+- Jeff Mills, "Exhibitionist Mix 3: TR-909 Workout" (https://www.youtube.com/watch?v=eU-UsvYbIV0) (2004)
 - Merche Blasco, "Espongina" (2013)
 - MSHR, various (https://mshr.info/MSHRinstruments.html) (2011)
 - Peter Bussigel, "ndial" (https://www.triangleline.com/projects/ndial) (2015)

@@ -41,13 +41,19 @@ Fabrication
 
 
 
-springboards
-
-https://www.digikey.com/en/products/detail/murata-electronics/7BB-27-4L0/4358154
-
 
 https://www.richardmudhar.com/blog/2022/07/piezo-contact-microphone-preamp-for-plug-in-power/
 JFETs can't be sourced  
 
 
 https://knowledge.lom.audio/research/contact_mics
+
+
+
+/
+
+fundamental sound concepts
+
+timbre
+frequency
+harmonics / spectrograms / harmonic series

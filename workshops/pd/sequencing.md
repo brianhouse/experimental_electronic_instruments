@@ -1,20 +1,6 @@
-## Using musical pitches
-
-Though no music theory is required here, if you want to use musical notes (even-temperment), Pd can convert to MIDI pitch numbers to frequencies and back. MIDI pitches are just the notes of an even-tempered piano labeled from 0–127. `mtof` converts this number to a frequency, and `ftom` converts it back.
-
-I also made an object called piano to help you determine those pitches, or just to connect and fool around with notes.
-
-If you want to use just-intonation or microtonal systems ... you'll have to program it yourself.
-
-<p align="center">
-  <img src="media/06_15_musical_notes.png" width=600 /><br />
-</p>
-
-
 # Sequencing (and Spatialization)
 
-Last time we covered the fundamentals of what we can do with waveforms in Pd. Now we're going to explore how we can organize those sounds in time in ways other than oscillation.
-
+Now that we know how to create rich sonic material with Pd, we're going to explore how we can structure those sounds over time.
 
 
 ## Delay
@@ -22,34 +8,35 @@ Last time we covered the fundamentals of what we can do with waveforms in Pd. No
 Envelopes give us the notion of an "event" in time that can be triggered. As we've already seen, in Pd, a "bang" is what makes things happen. There's a lot we can do with bangs, but to start off, we can delay them. Like this:
 
 <p align="center">
-  <img src="media/07_02_1_delay.png" width=600 /><br />
+  <img src="media/del.png" width=400 /><br />
 </p>
 
-The number in the delay object box tells us how long the delay will be. In this case, it's 1000 milliseconds—or one second. 
+The number in `del` tells us how long the delay will be. In this case, it's 1000 milliseconds—or one second. 
 
-What's important to realize at this point is there are two types of signals in Pd. So far, we've mainly been working with audio signals—the stuff that comes out of oscillators. But we've sent a few messages and used loadbang too—these aren't audio, they're "control" signals that tell Pd what to do. Audio objects are, of course, concerned with time, in the sense of building up audio waveforms. But `delay` is the first object to demonstrate that control signals have a different notion of time, which functions to cue different things to happen when we want them to. But `delay` is just the beginning.
+Remember that there are two types of signals in Pd. So far, we've mainly been working with audio signals—the stuff that comes out of oscillators. But we've sent a few messages and used loadbang too—these aren't audio, they're "control" signals that tell Pd what to do. Audio objects are, of course, concerned with time, in the sense of building up audio waveforms. But `del` is the first object to demonstrate that control signals have a different notion of time, which functions to cue different things to happen when we want them to.
 
 
-## Sequencing
+## Pulsation
 
-With static audio files in Audacity, we sequenced audio segments by splicing them and moving them on the timeline. There is no timeline in Pd, and all the sounds are being generated "real-time". We've already seen how to use LFOs to create change over time, but we can also trigger events using timers, bangs, and envelopes.
-
-Perhaps the most important object for sequencing is `metro` aka "metronome". `metro` outputs a bang every N milliseconds. To start a `metro`, we have to send it a 1, and to stop it, we send a 0. An easy way to do this is with a toggle object (both bangs and toggles are available from the "Put" menu):
+Perhaps the most important object for sequencing is `metro` aka "metronome". `metro` outputs a bang every N milliseconds. To start a `metro`, we have to send it a 1, and to stop it, we send a 0. An easy way to do this is with a toggle object (both bangs and toggles are available from the object menu, or by typing "bng" or "tgl" respectively in an object box):
 
 <p align="center">
-  <img src="media/07_03_metro_.png" width=600 /><br />
+  <img src="media/metro.png" width=400 /><br />
 </p>
+
+
+## Stepping
 
 To take things a step further, we can add a counter. This object will count the number of bangs it receives, up to but not including the parameter given as a default value or sent to its right inlet.
 
 <p align="center">
-  <img src="media/07_04_counter_.png" width=600 /><br />
+  <img src="media/step.png" width=400 /><br />
 </p>
 
-A more interesting display than a number box is HRadio, which is available from the Put menu. Since my counter goes to 10, I've had to go into the properties on the HRadio and increase the number of cells from the default 8.
+A more interesting display than a number box is HRadio, which is available from the object menu. Since my counter goes to 10, I've had to go into the properties on the HRadio and increase the number of cells from the default 8.
 
 <p align="center">
-  <img src="media/07_05_radios.png" width=600 /><br />
+  <img src="media/step_radio.png" width=400 /><br />
 </p>
 
 Next, we add a `select` object. `select` compares an input to its inlet with the numbers or symbols given to it as parameters. If the input matches one of them, the corresponding outlet gets a bang. (Note that the final outlet on `select` is just the input if the input doesn't match any of the specified options).
@@ -57,25 +44,29 @@ Next, we add a `select` object. `select` compares an input to its inlet with the
 Since our counter has 10 steps, it outputs values from 0 to 9. `select` takes that number, and bangs the appropriate step.
 
 <p align="center">
-  <img src="media/07_06_sequencer.png" width=600 /><br />
+  <img src="media/select.png" width=600 /><br />
 </p>
 
-From here, we could connect those bangs to envelope generators to play sounds, or use them to send messages with frequency values to oscillators, or both.
+From here, we could connect those bangs to envelope generators to play sounds.
 
-Here's a more developed example to show how that might look:
+Here's a simple drum machine to show how that might look:
 
 <p align="center">
-  <img src="media/07_07_sequencer_2_.png" width=600 /><br />
+  <img src="media/drum_machine.png" width=800 /><br />
 </p>
+
+Alternately, a sequencer could control the number values of oscillating frequencies. If we want those to align with standard musical tuning (12 TET), we can use the mtof
+
+
 
 Note that `counter` outputs a bang from its right outlet every time it has finished the count and is starting over. This means you can chain counters together to have different levels of repeating events:
 
 <p align="center">
-  <img src="media/07_08_counter_chain_.png" width=600 /><br />
+  <img src="media/measures.png" width=600 /><br />
 </p>
 
 
-### Random and comparison operators
+## Random and comparison operators
 
 Beyond `metro`, `counter`, and `select`, a very useful object for sequencing is `random`. When `random` receives a bang in its left inlet, it outputs a random number less than the default parameter or a message sent to its right inlet.
 
@@ -133,3 +124,16 @@ Look at `freeverb~`'s help file for details on how to use it. But at it's most b
 </p>
 
 I recommend using only one `freeverb~` object as the very last object before `dac~` or `output~`. More than one will be a burden on your CPU, and with just one you will have a coherent sense of spatialization.
+
+
+## Using musical pitches
+
+Though no music theory is required here, if you want to use musical notes (even-temperment), Pd can convert to MIDI pitch numbers to frequencies and back. MIDI pitches are just the notes of an even-tempered piano labeled from 0–127. `mtof` converts this number to a frequency, and `ftom` converts it back.
+
+I also made an object called piano to help you determine those pitches, or just to connect and fool around with notes.
+
+If you want to use just-intonation or microtonal systems ... you'll have to program it yourself.
+
+<p align="center">
+  <img src="media/06_15_musical_notes.png" width=600 /><br />
+</p>
