@@ -57,3 +57,17 @@ fundamental sound concepts
 timbre
 frequency
 harmonics / spectrograms / harmonic series
+
+
+digital audio
+
+samples, etc
+
+
+/
+
+
+effects
+
+delay
+chorus

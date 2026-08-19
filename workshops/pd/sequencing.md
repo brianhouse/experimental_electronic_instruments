@@ -110,10 +110,13 @@ However, note that the `ac/output~` has two inlets, one each for the right and l
 
 ### Reverb
 
-Look at `freeverb~`'s help file for details on how to use it. But at it's most basic, you simply hook the left channel to the left inlet, the right channel to the right inlet, stereo output, and away you go:
+When sound reverberates in a space, it takes on characteristics of that space as its waves bounce off the walls. It's why a small, carpeted office sounds so different than a large concert hall. 
+
+We can simulate this sense of space using "reverb", or in our case, `ac/verb~`. This works by delaying a signal many times and feeding the results back into itself—just like echoes bouncing around a room. `ac/verb~` takes three parameters: the percent mix between the "dry" and "wet" signals, the "feedback" amount, aka the intensity of the reverb, and the high-cut frequency, which simulates how higher frequencies will be absorbed by a room rather than reflected by it.
+
+Note that `ac/verb~` takes a mono signal and outputs a stereo one, distributing the reflections around the stereo field.
 
 <p align="center">
-  <img src="media/07_13_freeverb.png" width=600 /><br />
+  <img src="media/reverb.png" width=600 /><br />
 </p>
 
-I recommend using only one `freeverb~` object as the very last object before `dac~` or `output~`. More than one will be a burden on your CPU, and with just one you will have a coherent sense of spatialization.

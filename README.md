@@ -107,7 +107,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 #### Monday 9/21
 - Present Sound Design exercise
-- Workshop: Sequencing
+- Workshop: [Sequencing](workshops/pd/sequencing.md)
 
 
 #### Wednesday 9/23
@@ -119,7 +119,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 #### Monday 9/28
 - Present Sequencer exercise
-- Workshop: Sampling
+- Workshop: [Sampling](workshops/pd/sampling.md)
 - Midterm project start
 
 
