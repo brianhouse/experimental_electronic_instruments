@@ -2,10 +2,10 @@
 #X obj 418 163 random 6;
 #X floatatom 418 193 5 0 0 0 - - - 12;
 #X obj 418 237 select 0 1 2 3 4 5;
-#X obj 417 393 ac/osc~ tri;
+#X obj 417 393 ac/vco~ tri;
 #X obj 499 449 ac/eg~ 200 100 400 0.5 200;
 #X obj 417 475 *~;
-#X obj 417 526 ac/output~;
+#X obj 417 526 ac/spkr~;
 #X msg 499 415 1;
 #X msg 598 415 0;
 #X obj 418 112 metro;

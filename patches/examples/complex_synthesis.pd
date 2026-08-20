@@ -2,15 +2,15 @@
 #X obj 149 49 loadbang;
 #X obj 274 349 +~;
 #X msg 351 139 1000;
-#X obj 249 574 ac/output~;
+#X obj 249 574 ac/spkr~;
 #X obj 474 474 ac/scope~;
-#X obj 274 391 ac/osc~ sqr;
+#X obj 274 391 ac/vco~ sqr;
 #X text 117 238 varying carrier frequency;
 #X text 337 238 FM synthesis modulator;
 #X obj 524 174 ac/lfo~ sin;
 #X obj 274 454 *~;
 #X text 547 238 AM / tremolo;
-#X obj 274 499 ac/lop~;
+#X obj 274 499 ac/lpf~;
 #X obj 711 189 ac/lfo~ sin;
 #X text 749 248 filter;
 #X msg 711 154 0.25;

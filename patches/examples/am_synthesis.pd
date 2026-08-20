@@ -1,9 +1,9 @@
 #N canvas 827 239 734 565 12;
-#X obj 463 417 ac/output~;
+#X obj 463 417 ac/spkr~;
 #X floatatom 399 149 5 0 0 0 - - - 12;
 #X floatatom 524 149 5 0 0 0 - - - 12;
 #X obj 199 249 ac/scope~;
-#X obj 402 199 ac/osc~ sin;
+#X obj 402 199 ac/vco~ sin;
 #X obj 463 300 *~;
 #X obj 675 249 ac/scope~;
 #X obj 574 449 ac/scope~;

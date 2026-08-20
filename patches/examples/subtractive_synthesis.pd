@@ -1,12 +1,12 @@
 #N canvas 827 239 734 565 12;
-#X obj 499 474 ac/output~;
+#X obj 499 474 ac/spkr~;
 #X floatatom 824 380 5 0 0 0 - - - 16;
 #X text 525 356 second inlet sets cutoff frequency;
-#X obj 499 404 ac/lop~;
+#X obj 499 404 ac/lpf~;
 #X obj 549 149 ac/spec~;
 #X obj 824 149 ac/spec~;
 #X obj 827 340 hsl 196 18 10 20000 1 0 empty empty empty -2 -8 0 10 #191919 #e1e1e1 #e1e1e1 0 1;
-#X obj 499 106 ac/osc~ saw;
+#X obj 499 106 ac/vco~ saw;
 #X floatatom 499 73 5 0 0 0 - - - 12;
 #X connect 1 0 3 1;
 #X connect 3 0 0 1;

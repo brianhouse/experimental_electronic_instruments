@@ -1,8 +1,8 @@
 #N canvas 827 239 734 565 12;
-#X obj 494 552 ac/output~;
+#X obj 494 552 ac/spkr~;
 #X obj 449 35 tgl 25 0 empty empty empty 0 -10 0 10 #191919 #e1e1e1 #e1e1e1 0 1;
 #X obj 449 149 hradio 20 1 0 5 empty empty empty 0 -8 0 10 #191919 #e1e1e1 #e1e1e1 0;
-#X obj 483 409 ac/osc~ saw;
+#X obj 483 409 ac/vco~ saw;
 #X obj 449 181 select 0 1 2 3 4 5;
 #X obj 449 105 ac/step 5;
 #X obj 494 496 *~;

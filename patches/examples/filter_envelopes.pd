@@ -21,9 +21,9 @@
 #X obj 199 147 loadbang;
 #X msg 199 173 200;
 #X obj 469 277 ac/eg~ 20 100 0.5 100 100;
-#X obj 199 376 ac/lop~;
-#X obj 77 445 ac/output~;
-#X obj 199 199 ac/osc~ saw;
+#X obj 199 376 ac/lpf~;
+#X obj 77 445 ac/spkr~;
+#X obj 199 199 ac/vco~ saw;
 #X obj 580 173 del 1000;
 #X obj 220 465 ac/spec~;
 #X obj 230 338 ac/freqscale~ 0 1 100 2000;

@@ -1,5 +1,5 @@
 #N canvas 827 239 734 565 12;
-#X obj 494 552 ac/output~;
+#X obj 494 552 ac/spkr~;
 #X obj 449 35 tgl 25 0 empty empty empty 0 -10 0 10 #191919 #e1e1e1 #e1e1e1 0 1;
 #X obj 449 149 hradio 20 1 0 8 empty empty empty 0 -8 0 10 #191919 #e1e1e1 #e1e1e1 0;
 #X obj 449 181 select 0 1 2 3 4 5 6 7;
@@ -7,12 +7,12 @@
 #X obj 449 74 metro 200;
 #X msg 218 374 55;
 #X msg 280 374 0;
-#X obj 218 417 ac/osc~ cos;
+#X obj 218 417 ac/vco~ cos;
 #X obj 213 330 bng 25 250 50 0 empty empty empty 0 -10 0 10 #191919 #e1e1e1 #e1e1e1;
 #X obj 319 417 ac/eg~ 10 100 0 0;
 #X obj 218 467 *~;
 #X obj 495 355 noise~;
-#X obj 495 417 ac/lop~;
+#X obj 495 417 ac/lpf~;
 #X obj 598 307 bng 25 250 50 0 empty empty empty 0 -10 0 10 #191919 #e1e1e1 #e1e1e1;
 #X obj 533 474 *~;
 #X msg 316 374 1;
@@ -30,7 +30,7 @@
 #X obj 799 474 *~;
 #X msg 839 384 1;
 #X text 792 320 hats;
-#X obj 761 417 ac/hip~;
+#X obj 761 417 ac/hpf~;
 #X msg 792 384 3000;
 #X obj 839 421 ac/eg~ 2 50 0 0;
 #X connect 1 0 5 0;

@@ -1,4 +1,4 @@
-# Sequencing
+# Sequencer
 
 Create a never-ending sound composition with a Pd patch that incorporates various sounds sequenced together.
 
