@@ -84,6 +84,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 ### Week 2
 
 #### Monday 9/7
+- Reading due: Daniela Fantechi, ["The Contact Microphone: A Cultural Object"](readings/fantechi_contact_mics.pdf) (2019)
 - Workshop: Noise boxes
 - Project for next class: [Noise Boxes](projects/noise_box.md)
 
@@ -99,6 +100,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 
 #### Wednesday 9/16
+- Reading due: Tara Rodgers, ["Synthesis"](readings/rodgers_synthesis.pdf) (2015)
 - Workshop: [Envelopes](workshops/pd/envelopes.md)
 - Exercise for next class: [Sound Design](exercises/sound_design.md)
  
@@ -111,6 +113,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 
 #### Wednesday 9/23
+- Reading due: Jaron Lanier, ["Missing Persons" from _You Are Not a Gadget_](readings/lanier_midi.pdf) (2010)
 - Sequencing workshop continued
 - Exercise for next class: [Sequencer](exercises/sequencer.md)
 
@@ -124,6 +127,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 
 #### Wednesday 9/30
+- Reading due: C. Spencer Yeh, ["Tarek Atoui on Hospitality, Collaboration and Expanding Musical Instruments"](readings/yeh_atoui.pdf) (2025)
 - Workshop: Live Input
 - Exercise for next class: [Sampler](exercises/sampler.md)
 
@@ -135,6 +139,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Questions and work time
 
 #### Wednesday 10/7
+- Reading due: Laetitia Sonami, [Interview with Tara Rogers and "Requiem for the Lady's Glove"](readings/sonami.pdf) (2010s)
 - Questions and work time
 
 
@@ -152,6 +157,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Workshop: Introduction to Daisy Seed (compiling, speakers, buttons, dials)
 
 #### Wednesday 10/21
+- Reading due: Perry Cook, ["Principles for Designing Computer Music Controllers"](readings/cook_controllers.pdf) (2017)
 - Daisy Seed workshop continued
  
 
@@ -161,6 +167,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Workshop: Sensors
 
 #### Wednesday 10/28
+- Reading due: Atau Tanaka, ["Musical Performance Practice on Sensor-Based Instruments"](readings/tanaka_sensors.pdf) (2000)
 - Workshop: IMUs
 - Exercise for next class: [Prototype](exercises/prototype.md)
  
@@ -173,6 +180,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Exercise for end of next class: [Object](exercises/object.md)
 
 #### Wednesday 11/4
+- Reading due: Don Norman, ["The Psychopathology of Everyday Things"](readings/norman_affordances.pdf) (1988)
 - Laser workshop continued
 - Present Object exercise
 
@@ -183,6 +191,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Final project proposal due
 
 #### Wednesday 11/11
+- Reading due: George Lewis, ["Too Many Notes: Computers, Complexity and Culture in Voyager"](readings/lewis_voyager.pdf) (2000)
 - Questions and work time
  
 
@@ -204,6 +213,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Questions and work time
 
 #### Wednesday 12/2
+- Reading due: Alex Galloway, ["The Unworkable Interface"](readings/galloway_interface.pdf) (2012)
 - Questions and work time
  
 

@@ -1,0 +1,5 @@
+#N canvas 827 239 734 565 12;
+#X obj 199 263 soundfiler;
+#X text 199 173 DESKTOP LOADER - delete both before compiling:;
+#X msg 199 213 read -resize kick_tiny.wav sample;
+#X connect 2 0 0 0;
