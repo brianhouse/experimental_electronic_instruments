@@ -1,6 +1,3 @@
-- dates on presentation schedule
-
-- readings
 - Noise box tutorials and assignment
 - Prototype exercise
 - final assignment

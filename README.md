@@ -34,8 +34,6 @@ You will complete two larger projects over the course of the semester, each of w
 ### Presentations
 Over the course of the semester, each student will give **TWO** 10-minute presentations on an artist known for experimental instrument design as listed in the syllabus. These presentations, which must be organized in 5–10 slides (Google Slides, Keynote, PowerPoint, etc), should include a photo of the artist and give a quick overview of the context in which they are working before proceeding to show an example of their work, explain how it works, and discuss its influence. Students should comment thoughtfully on how the work relates to the themes discussed in class as well as to their own practices and conclude with a few questions to kick off a brief conversation. Students will [sign up to present](https://docs.google.com/spreadsheets/d/1QiT8hSkzD31m8Fyfr4OaqqEryU2xqBV39VIuVSk9oCY/edit) on an artwork on a first-come, first-served basis. Slides should be turned in on Moodle prior to class, and students will present using their own computers.
 
-Material for some of the artists is online [here](https://drive.google.com/drive/folders/1-6ahKmQYCKO24DA45h7uZsKFngLRaR-8?usp=sharing)
-
 For assistance developing presentation skills, students should reach out to [Susan Daniels](https://www.amherst.edu/academiclife/support/writingcenter/public-speaking) at the Writing Center.
 
 ### Reading
@@ -89,6 +87,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Project for next class: [Noise Boxes](projects/noise_box.md)
 
 #### Wednesday 9/9
+<!-- - Rick Mears 1:45 -->
 - Finish and listen to Noise Boxes
  
 
@@ -100,6 +99,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 
 #### Wednesday 9/16
+- Presentations #1
 - Reading due: Tara Rodgers, ["Synthesis"](readings/rodgers_synthesis.pdf) (2015)
 - Workshop: [Envelopes](workshops/pd/envelopes.md)
 - Exercise for next class: [Sound Design](exercises/sound_design.md)
@@ -113,6 +113,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 
 #### Wednesday 9/23
+- Presentations #2
 - Reading due: Jaron Lanier, ["Missing Persons" from _You Are Not a Gadget_](readings/lanier_midi.pdf) (2010)
 - Sequencing workshop continued
 - Exercise for next class: [Sequencer](exercises/sequencer.md)
@@ -127,6 +128,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 
 #### Wednesday 9/30
+- Presentations #3
 - Reading due: C. Spencer Yeh, ["Tarek Atoui on Hospitality, Collaboration and Expanding Musical Instruments"](readings/yeh_atoui.pdf) (2025)
 - Workshop: Live Input
 - Exercise for next class: [Sampler](exercises/sampler.md)
@@ -139,6 +141,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Questions and work time
 
 #### Wednesday 10/7
+- Presentations #4
 - Reading due: Laetitia Sonami, [Interview with Tara Rogers and "Requiem for the Lady's Glove"](readings/sonami.pdf) (2010s)
 - Questions and work time
 
@@ -148,6 +151,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 #### Monday 10/12 -- FALL BREAK
 
 #### Wednesday 10/14
+- Presentations #5
 - Midterm project critique
 
 
@@ -157,6 +161,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Workshop: Introduction to Daisy Seed (compiling, speakers, buttons, dials)
 
 #### Wednesday 10/21
+- Presentations #6
 - Reading due: Perry Cook, ["Principles for Designing Computer Music Controllers"](readings/cook_controllers.pdf) (2017)
 - Daisy Seed workshop continued
  
@@ -167,6 +172,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Workshop: Sensors
 
 #### Wednesday 10/28
+- Presentations #7
 - Reading due: Atau Tanaka, ["Musical Performance Practice on Sensor-Based Instruments"](readings/tanaka_sensors.pdf) (2000)
 - Workshop: IMUs
 - Exercise for next class: [Prototype](exercises/prototype.md)
@@ -180,6 +186,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Exercise for end of next class: [Object](exercises/object.md)
 
 #### Wednesday 11/4
+- Presentations #8
 - Reading due: Don Norman, ["The Psychopathology of Everyday Things"](readings/norman_affordances.pdf) (1988)
 - Laser workshop continued
 - Present Object exercise
@@ -188,9 +195,11 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 ### Week 11
 
 #### Monday 11/9
+- Presentations #9
 - Final project proposal due
 
 #### Wednesday 11/11
+- Presentations #10
 - Reading due: George Lewis, ["Too Many Notes: Computers, Complexity and Culture in Voyager"](readings/lewis_voyager.pdf) (2000)
 - Questions and work time
  
@@ -198,9 +207,11 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 ### Week 12
 
 #### Monday 11/16
+- Presentations #11
 - Questions and work time
 
 #### Wednesday 11/18
+- Presentations #12
 - Final project prototype critique
 
 
