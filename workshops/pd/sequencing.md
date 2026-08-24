@@ -1,5 +1,3 @@
-
-
 # Sequencing (and Spatialization)
 
 Now that we know how to create rich sonic material with Pd, we're going to explore how we can structure those sounds over time.

@@ -48,43 +48,48 @@ Export the track as a WAV file, and save it in your Pd folder. **rename the trac
 
 ## Manipulating samples in Pd
 
-To work with our sample in Pd, we will use the `audioclip~` pre-built object. `audioclip~` has four inlets and two outlets. The leftmost outlet is the audio signal, and for now we'll connect this to the left and right channels on an `output~`.
-
-The leftmost inlet on `audioclip~` takes control messages. We can load our sample in two ways: either by sending the message `open`, and then selecting our file from the dialog box, or by sending a message with the name of the file. While the former method is good for experimenting, the latter allows us to load a sample when the patch loads (by using a `loadbang`).
-
-Once loaded, the message `play` will play the sample from the beginning (and `stop` will interrupt it). ...if it doesn't play, make sure your DSP and Audio are switched on.
+Pd stores samples (in both senses) in data structures called arrays. Create an array by using the object browser. Using the info pane, give it a unique name, and note that you can specify the default number of samples (in the data sense). To find this number, multiply the number of seconds you want times the sample rate (eg, 48000).
 
 <p align="center">
-  <img src="media/08_07_sampler_.png" width=600 /><br />
+  <img src="media/array.png" width=600 /><br />
 </p>
 
-The audio just plays once. However, by sending a message `loop 1` we can make it loop (and `loop 0` will turn looping off).
+Next, create a `ac/smpplay~` object with the name of the array as its argument. This object will read the contents of the array and play it as audio when it receives a "start" message. 
 
-Notice that a slider object below the waveform shows the position of playback as the sample plays. There are also two sliders above the waveform that we can use to select just a portion of the sample for playback. Alternately, we can attach number boxes to the last two outlets on `audioclip~` and specify the selection points that way:
+Finally, create a `ac/smpload` object, also with the name of the array as an argument. When it receives a bang, `ac/smpload` will prompt you for a wav file to load into the array. Do so now—you should see the waveform appear in array graphic, and you should be able to play it.
+
 
 <p align="center">
-  <img src="media/08_08_loop_.png" width=600 /><br />
+  <img src="media/sampler.png" width=600 /><br />
+</p>
+
+Notice that putting a slider object below the waveform shows the position of playback as the sample plays.
+
+There are also two sliders that we can add to select just a portion of the sample for playback, "loop start" and "loop stop", each of which is scaled 0 to 1 over the length of the sample:
+
+<p align="center">
+  <img src="media/loop.png" width=600 /><br />
 </p>
 
 Note that if we added messages and a `loadbang`, we could therefore save the loop points so that they load with the patch.
 
-Alternatively, we could set the loop points randomly, playing a different section of the audio each time:
+...or we could set the points dynamically. For example, we could use a random start and during triggered by a metro:
 
 <p align="center">
-  <img src="media/08_09_random_loop.png" width=600 /><br />
+  <img src="media/random_loop.png" width=600 /><br />
 </p>
 
 
-Finally, `audioclip~`'s second inlet determines the playback rate. This offers some interesting possibilities. To begin with, you might simply experiment with the sample played at a faster or slower rate.
+Finally, `smpplay~`'s first inlet determines the playback rate. This offers some interesting possibilities. To begin with, you might simply experiment with the sample played at a faster or slower rate. (also note the auto-load of the wav file in this example)
 
 <p align="center">
   <img src="media/08_10_rate.png" width=600 /><br />
 </p>
 
-However, by adding a little math to the rate calculation, we can create a tuned sampler. The `piano` object will give us the frequencies for each note; if we want middle C to play the sample at the original pitch, we'll have to divide everything by the frequency of middle C (261.63 Hz). This will give us a ratio that we can send to `audioclip~`.
+However, by adding our pitch math to the rate calculation, we can create a tuned sampler:
 
 <p align="center">
-  <img src="media/08_11_tuned.png" width=600 /><br />
+  <img src="media/tuned.png" width=800 /><br />
 </p>
 
 You could also make a series of messages with different frequency and/or pitch values and bang those with a sequencer.

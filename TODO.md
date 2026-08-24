@@ -1,14 +1,18 @@
-- Noise box tutorials
-- Prototype exercise
+## now
 
-DO THE READINGS
-
-SCREENSHOTS, shit. vco~ (and explain), etc.
-
-need cables
+REDO SCREENSHOTS, shit
 
 
-//// 
+
+
+vet and helps for follower~, dbpeak~, onset~, record~?
+
+
+
+## materials 
+
+
+bigger perf boards?
 
 
 glowforge glue for draftboard
@@ -20,21 +24,13 @@ https://www.amazon.com/Titebond-Woodworking-Furniture-Assembly-Construction/dp/B
 https://www.digikey.com/en/products/detail/murata-electronics/7BB-27-4L0/4358154
 
 
-////
+## start
 
-use sin
-
-
-/
-
-vet and helps for follower~, dbpeak~, onset~, record~?
-
-
-///
+DO THE READINGS
 
 
 
-# additional
+## additional
 
 fundamental sound concepts
 

@@ -5,7 +5,7 @@ Let's explore how to create waveforms with Pd.
 
 ## Oscillators
 
-All synthesis starts with oscillators. `ac/vco~` is a perfect sine wave that oscillates between -1 and 1. We can also write it as `ac/vco~ sin`. However, there are other shapes that we can use: try `ac/vco~ tri`, `ac/vco~ saw`, `ac/vco~ sqr` in your patch and play with the results.
+All synthesis starts with oscillators. We'll use `ac/vco~` (VCO stands for Voltage-Controlled Oscillator, which is the fundamental building block for most synths; the input here is not "voltage" per se, but the principle is the same). By default, `ac/vco~` outputs a perfect sine wave that oscillates between -1 and 1, which we can also write as `ac/vco~ sin`. However, there are other shapes that we can use: try `ac/vco~ tri`, `ac/vco~ saw`, `ac/vco~ sqr` in your patch and play with the results.
 
 <p align="center">
   <img src="media/oscillator_shape.png" width=400 /><br />
