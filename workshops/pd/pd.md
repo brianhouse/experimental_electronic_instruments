@@ -2,7 +2,7 @@
 
 There are many ways that artists and musicians have produced electronic sound, from hardware modular synthesizers like those produced by Moog and Buchla to software platforms like Ableton or MainStage.
 
-We're going to be using a visual control-flow programming language. Unlike most programming languages, this type of programming doesn't use code per se, but a graphical layout of functions and operators. It's a common approach for working with multimedia, including languages like vvvv, Isadora, and Quartz Composer. Max/MSP is the first and most influential of these, which was originally developed by the researcher Miller Puckette and now powers the effects in Abelton Live. After Max became a commercial product, Puckette created a free and open-source version called Pure Data, or Pd. Plugdata is a community rewrite of Pd with a better user interface—and support for compiling to hardware. So plugdata is what we will use to build our sounds and power our instruments.
+We're going to be using a visual control-flow programming language. Unlike most programming languages, this type of programming doesn't use code per se, but a graphical layout of functions and operators. It's a common approach for working with multimedia, including languages like vvvv, Isadora, and Quartz Composer. Max/MSP is the first and most influential of these, which was originally developed by the researcher Miller Puckette and now powers the effects in Ableton Live. After Max became a commercial product, Puckette created a free and open-source version called Pure Data, or Pd. Plugdata is a community rewrite of Pd with a better user interface—and support for compiling to hardware. So plugdata is what we will use to build our sounds and power our instruments.
 
 We could do the exact same thing with electronics, store-bought modules, or pre-made software, but this approach demonstrates the fundamentals (and it's free). In addition, Pd can not only run on your computer, but phones and electronic devices, so it's used to make effects for those as well.
 
@@ -23,7 +23,7 @@ Now, back in Pd, to make sure our audio is up and running, select "☰" in the u
   <img src="media/audio_test.png" width=600 /><br />
 </p>
 
-Finally, under the menu, there is a checkbox for "Compiled mode". Make sure this is checked. It will restrict the capabilities of Pd to what is possible to compile for our hardware chips—turning it on now simplifies things for us now and sets us up for what we'll need to do down the line.
+Finally, under the menu, there is a checkbox for "Compiled mode". Make sure this is checked. It will restrict the capabilities of Pd to what is possible to compile for our hardware chips—turning it on now simplifies things for us and sets us up for what we'll need to do down the line.
 
 <p align="center">
   <img src="media/compiled_mode.png" width=200 /><br />
@@ -117,15 +117,15 @@ Audio signals flow a little differently than messages, because they are continuo
 
 What is an audio object? We know that an object handles audio if its name ends in a tilde ("~").
 
-Add an object box to a new patch, and type `ac/osc~ sin`. This is a sine-wave oscillator.
+Add an object box to a new patch, and type `ac/vco~ sin`. This is a sine-wave oscillator.
 
 <p align="center">
   <img src="media/osc.png" width=400 /><br />
 </p>
 
-Next, connect a `number` box upstream to both inlets of an `ac/output~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish audio connections from control connections by their dashed lines, and audio inlets and outlets are orange instead of blue.
+Next, connect a `number` box upstream to both inlets of an `ac/spkr~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish audio connections from control connections by their dashed lines, and audio inlets and outlets are orange instead of blue.
 
-`ac/output~` is a digital analog converter—it will make our signal into sound. It has a volume control, a mute button, and it also lets you record a wave file: click the checkbox on to start recording, and again to turn it off (note that you will see warnings on the side that `writesf~` and `savepanel` are not supported in Compiled Mode—this is ok for our purposes).
+`ac/spkr~` is a digital analog converter—it will make our signal into sound. It has a volume control, a mute button, and it also lets you record a wave file: click the checkbox on to start recording, and again to turn it off (note that you will see warnings on the side that `writesf~` and `savepanel` are not supported in Compiled Mode—this is ok for our purposes).
 
 Now, in playback mode, increase the value of the `number` box to 300 or so, and you should hear a "pure" synthesized tone.
 
@@ -133,7 +133,7 @@ Now, in playback mode, increase the value of the `number` box to 300 or so, and 
   <img src="media/output.png" width=400 /><br />
 </p>
 
-Let's get a better sense of what's going on here by making a visual output as well. Create a `ac/scope~` object (which is one of the externals we added at the beginning).
+Let's get a better sense of what's going on here by making a visual output as well. Create an `ac/scope~` object (which is one of the externals we added at the beginning).
 
 You may have to arrange things a bit to get everything to fit. Switch into playback mode and make sure audio/DSP is on, and you should see the waveform graphed on the screen.
 

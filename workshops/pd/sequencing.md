@@ -87,15 +87,15 @@ Combined with `select`, this is an easy way to choose between several options on
   <img src="media/random_2.png" width=400 /><br />
 </p>
 
-Note that this example uses another new object, `<` which outputs a 1 if it receives a number lesser than its argument. We can then select on the output of `<` to get a bang that only fires half of the time. If `random` is generating 0-99, then this value is the probability as a percentage.
+Note that this example uses another new object, `<` which outputs a 1 if it receives a number less than its argument. We can then select on the output of `<` to get a bang that only fires half of the time. If `random` is generating 0-99, then this value is the probability as a percentage.
 
-Other comparison operator objects are: `<`, `<=`, `>=`, and `==` (note the double).
+Other comparison operator objects are: `>`, `<=`, `>=`, `==` (note the double), and `!=`.
 
 ## Spatialization
 
-We've already seen how to apply amplitude envelopes to sound in Pd as well as to "mix" sounds by dividing or multiplying their output by a number to decrease or increase their  amplitude.
+We've already seen how to apply amplitude envelopes to sound in Pd as well as to "mix" sounds by dividing or multiplying their output by a number to decrease or increase their amplitude.
 
-However, note that the `ac/output~` has two inlets, one each for the right and left channel of a stereo signal. By connecting signals only to one or the other, we can pan them hard left or hard right.
+However, note that the `ac/spkr~` has two inlets, one each for the right and left channel of a stereo signal. By connecting signals only to one or the other, we can pan them hard left or hard right.
 
 ...but for more detailed control, we can use `ac/pan~`. This object takes either a continually varying signal (aka an LFO) or a control value, and routes a mono input to stereo output, adjusting the balance between channels accordingly.
 

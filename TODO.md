@@ -1,7 +1,11 @@
-- Noise box tutorials and assignment
+- Noise box tutorials
 - Prototype exercise
 
 DO THE READINGS
+
+SCREENSHOTS, shit. vco~ (and explain), etc.
+
+need cables
 
 
 //// 

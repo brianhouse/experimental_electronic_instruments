@@ -102,13 +102,13 @@ For example, here's a low-pass filter (using the right outlet of `vcf~`) with th
 
 We can, however, also automate a filter change. It turns out `audioclip~` has a second, right outlet, which gives a signal from 0 to 1 corresponding to how far along in the loop playback has progressed. We can use this value to automatically update the cutoff frequency we give to `vcf~`, therefore creating a filter sweep with every loop.
 
-To do this, we're going to use another object we haven't talked about yet: `rescale~`. Rescale takes numbers within a given range and rescales them to another range. So for example, if we are getting a signal between 0 and 1 from `audioclip~`'s right outlet, and we want our filter sweep to go from 50 Hz to 8kHz, we could use the arguments `rescale~ 0 1 50 8000`.
+To do this, we're going to use another object we haven't talked about yet: `ac/map~`. `ac/map~` takes numbers within a given range and rescales them to another range. So for example, if we are getting a signal between 0 and 1 from `audioclip~`'s right outlet, and we want our filter sweep to go from 50 Hz to 8kHz, we could use the arguments `ac/map~ 0 1 50 8000`.
 
 <p align="center">
   <img src="media/08_13_sweep.png" width=600 /><br />
 </p>
 
-(Also, `rescale`, without the tilde, works similarly for numbers instead of audio signals.)
+(Also, `ac/map`, without the tilde, works similarly for numbers instead of audio signals.)
 
 For another example, let's add some tremolo to the output. All this entails is multiplying the output from `audioclip~` by an LFO:
 

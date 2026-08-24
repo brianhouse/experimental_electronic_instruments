@@ -83,7 +83,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 #### Monday 9/7
 - Reading due: Daniela Fantechi, ["The Contact Microphone: A Cultural Object"](readings/fantechi_contact_mics.pdf) (2019)
-- Workshop: Noise boxes
+- Workshop: [Contact Mics](workshops/contact_mics.md)
 - Project for next class: [Noise Boxes](projects/noise_box.md)
 
 #### Wednesday 9/9
