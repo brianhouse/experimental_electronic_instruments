@@ -1,15 +1,17 @@
-assorted springs
-combs
-Feeler gauge set — the sleeper pick. A fan of graduated steel tines for ~$5–10 at an auto-parts store; anchored at one end it's basically a metal kalimba with a dozen pitches. Best variety buy after the springs.
-Hacksaw blades cut to different lengths — twangy, cheap.
-Rubber bands in assorted widths; guitar/piano strings (wound vs plain sound very different).
-Bobby pins / hair clips / paper clips.
+# Noise Box
 
-Threaded rod + a nut you run along it; zippers; cheese graters; files/rasps; corrugated cardboard edges.
+Using a piezo contact mic + amplifier, create a noise box.
 
-Rice, dried beans, BBs, ball bearings, small beads sealed inside compartments.
+Begin with a resonant chamber, which might be a found object (box, can, etc) or constructed from cardboard or wood. Mount your piezo disc inside the chamber.
 
-can I gift students funds to go to Hamshaw?
+Augment the chamber with noisemakers. Ideas:
+- rice, dried beans, BBs, ball bearings, small beads sealed inside compartments
+- threaded rod; zippers; cheese graters; files/rasps; corrugated cardboard edges
+- rubber bands in assorted widths; guitar/piano strings
+- Bobby pins; hair clips; paper clips; combs
+- etc
+
+Source noisemakers from wherever you can. Receipts from Hamshaw (150 College Street) will be reimbursed up to $15.
 
 
-I will reimburse you for materials from Hamshaw (the hardware store across the street) up to ~$20 (with receipt).
+![](noise_box.jpg)
