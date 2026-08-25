@@ -97,28 +97,28 @@ You could also make a series of messages with different frequency and/or pitch v
 
 ## Using samples as audio signals
 
-The left outlet of `audioclip~` is an audio signal, and rather than connect it directly to `output~`, you can use it as an input to any kind of synthesis, whether additive, AM, FM, or subtractive.
+The left outlet of `ac/smpplay~` is an audio signal, and rather than connect it directly to `ac/spkr~`, you can use it as an input to any kind of synthesis, whether AM, FM, subtractive, or whatever else.
 
-For example, here's a low-pass filter (using the right outlet of `vcf~`) with the Q set at 10 and the cutoff frequency controlled with a slider (remember to make it logarithmic and set an appropriate range in the properties):
-
-<p align="center">
-  <img src="media/08_12_filter.png" width=600 /><br />
-</p>
-
-We can, however, also automate a filter change. It turns out `audioclip~` has a second, right outlet, which gives a signal from 0 to 1 corresponding to how far along in the loop playback has progressed. We can use this value to automatically update the cutoff frequency we give to `vcf~`, therefore creating a filter sweep with every loop.
-
-To do this, we're going to use another object we haven't talked about yet: `ac/map~`. `ac/map~` takes numbers within a given range and rescales them to another range. So for example, if we are getting a signal between 0 and 1 from `audioclip~`'s right outlet, and we want our filter sweep to go from 50 Hz to 8kHz, we could use the arguments `ac/map~ 0 1 50 8000`.
+For example, here's a low-pass filter with the rolloff frequency controlled with a slider (remember to make it logarithmic and set an appropriate range in the properties):
 
 <p align="center">
-  <img src="media/08_13_sweep.png" width=600 /><br />
+  <img src="media/filter_play.png" width=600 /><br />
 </p>
 
-(Also, `ac/map`, without the tilde, works similarly for numbers instead of audio signals.)
+We can, however, also automate a filter change. The right outlet of `ac/smpplay~` gives a value from 0 to 1 corresponding to how far along in the loop playback has progressed. We can use this value to automatically update the cutoff frequency we give to `ac/lpf~`, therefore creating a filter sweep with every loop.
 
-For another example, let's add some tremolo to the output. All this entails is multiplying the output from `audioclip~` by an LFO:
+To do this, we're going to use `ac/map`. `ac/map` takes numbers within a given range and rescales them to another range. So for example, if we are getting a signal between 0 and 1 from `ac/smpplay~`'s right outlet, and we want our filter sweep to go from 50 Hz to 8kHz, we could use the arguments `ac/map 0 1 50 8000`.
 
 <p align="center">
-  <img src="media/08_14_tremolo_.png" width=600 /><br />
+  <img src="media/sweep.png" width=600 /><br />
 </p>
 
-While not as flexible as a raw oscillator, samples obviously add a lot more sonic texture and conceptual possibilities to your patches.
+(Also, `ac/map~`, with the tilde, works similarly for signals instead of control messages.)
+
+For another example, let's add some tremolo to the output. All this entails is multiplying the output of `ac/smpplay~` by an LFO:
+
+<p align="center">
+  <img src="media/play_tremolo.png" width=600 /><br />
+</p>
+
+Ultimately, you can think of sample arrays as another kind of oscillator, one that can add a lot of sonic texture and conceptual possibilities to your patches.
