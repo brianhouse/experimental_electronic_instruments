@@ -167,6 +167,16 @@ One very helpful object for this is called `loadbang`—it sends a bang when the
 </p>
 
 
+## Recording a sound file
+
+To record what's happening in your patch, use `ac/recorder~`. This takes two signals, one for each channel, along with an "open" message to choose a path to write to and "start" and "stop" messages to do the thing.
+
+<p align="center">
+  <img src="media/recorder.png" width=800 /><br />
+</p>
+
+
+
 ## Figuring things out as you go
 
 Some notes on finding your way around:

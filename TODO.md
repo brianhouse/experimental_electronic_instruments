@@ -3,10 +3,8 @@
 REDO SCREENSHOTS, shit
 
 
-
-
-vet and helps for follower~, dbpeak~, onset~, record~?
-
+link to download/ac
+link to download audacity
 
 
 ## materials 
