@@ -7,7 +7,7 @@ However, Pd is also capable of loading audio data and using it like a signal. It
 
 ## Preparing a sample
 
-To begin with, we'll need some audio to work with. We can use Audacity for this. After opening the application, use "File" -> "Import" -> "Audio..." and navigate to the audio you want to use. This could be something you recorded, of course, but this example will use a musical track. This is an .m4a file, but Audacity should be able to convert it.
+To begin with, we'll need some audio to work with. We can use [Audacity](https://www.audacityteam.org/download/) for this. After installing and opening the application, use "File" -> "Import" -> "Audio..." and navigate to the audio you want to use. This could be something you recorded, of course, but this example will use a musical track. This is an .m4a file, but Audacity should be able to convert it.
 
 <p align="center">
   <img src="media/audacity_import_1.png" width=600 /><br />

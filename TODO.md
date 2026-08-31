@@ -1,10 +1,5 @@
 ## now
 
-REDO SCREENSHOTS, shit
-
-link to download/ac
-link to download audacity
-
 
 ## materials 
 
