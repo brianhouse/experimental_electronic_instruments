@@ -24,3 +24,5 @@
 - Tod Machover, "Hyperinstruments" (1986)
 - Reed Ghazala, "Incantor" (1978)
 - Wintergatan, "Marble Machine" (2016)
+- Leon Theremin and Clara Rockmore, The Theremin (1920)
+- Imogen Heap, "Mi.Mu Gloves" (2010)
