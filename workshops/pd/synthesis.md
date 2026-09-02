@@ -112,3 +112,10 @@ Notice how we can use `ac/freqscale~` to change the 0 to 1 range of an LFO to an
 
 
 
+## Recording a sound file
+
+To record what's happening in your patch, use `ac/recorder~`. This takes two signals, one for each channel, along with an "open" message to choose a path to write to and "start" and "stop" messages to do the thing.
+
+<p align="center">
+  <img src="media/recorder.png" width=800 /><br />
+</p>

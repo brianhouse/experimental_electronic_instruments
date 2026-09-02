@@ -19,6 +19,8 @@ Once you have launched the application, but before we do anything with it, we ne
 </p>
 
 Now, back in Pd, to make sure our audio is up and running, select "☰" in the upper left of the screen to get the menu and select "Settings..." Under the Audio tab, click "Test" to make sure the audio is working as you'd like it.
+
+In this screen, also make sure that the sample rate is set to 48000.
 <p align="center">
   <img src="media/audio_test.png" width=600 /><br />
 </p>
@@ -164,15 +166,6 @@ One very helpful object for this is called `loadbang`—it sends a bang when the
 
 <p align="center">
   <img src="media/loadbang.png" width=400 /><br />
-</p>
-
-
-## Recording a sound file
-
-To record what's happening in your patch, use `ac/recorder~`. This takes two signals, one for each channel, along with an "open" message to choose a path to write to and "start" and "stop" messages to do the thing.
-
-<p align="center">
-  <img src="media/recorder.png" width=800 /><br />
 </p>
 
 

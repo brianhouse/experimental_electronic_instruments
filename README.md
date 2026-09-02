@@ -164,12 +164,20 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Presentations #6
 - Reading due: Perry Cook, ["Principles for Designing Computer Music Controllers"](readings/cook_controllers.pdf) (2017)
 - Daisy Seed workshop continued
+
+#### Thursday 9/24 @ 5PM
+- Sarah Kahn artist talk, Pruyne Lecture Hall (Fayerweather 115)
  
 
 ### Week 9
 
 #### Monday 10/26
 - Workshop: Sensors
+
+#### 5:30PM
+- Rapaport Lecture, An-My Lê Moses, Pruyne Lecture Hall (Fayerweather 115)
+
+
 
 #### Wednesday 10/28
 - Presentations #7
@@ -202,6 +210,9 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Presentations #10
 - Reading due: George Lewis, ["Too Many Notes: Computers, Complexity and Culture in Voyager"](readings/lewis_voyager.pdf) (2000)
 - Questions and work time
+
+#### Thursday 11/12 @ 5PM
+- Alison Moses artist talk, Pruyne Lecture Hall (Fayerweather 115)
  
 
 ### Week 12

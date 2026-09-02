@@ -4,6 +4,9 @@
 ## materials 
 
 
+https://www.adafruit.com/product/6413?gad_source=1&gad_campaignid=23986111167&gbraid=0AAAAADx9JvRY_jBY46TIvEjTikdJTinUz&gclid=Cj0KCQjwkt_UBhDMARIsALpnOAwIr1cmRnY5HmnCUmY9KW3uPyZnNCMh21361N8QHnCaNd0AcTahN94aAlFyEALw_wcB
+
+
 bigger perf boards?
 
 
