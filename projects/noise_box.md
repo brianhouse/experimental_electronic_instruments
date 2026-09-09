@@ -15,3 +15,10 @@ Source noisemakers from wherever you can. Receipts from Hamshaw (150 College Str
 
 
 ![](noise_box.jpg)
+
+
+### Deliverables
+
+You will present your noise box in class, giving a short performance.
+
+In addition, you will produce a documentation video from 2–3 minutes long. You may use your phone, but film in **landscape**, [use AE/AF Lock](https://improvephotography.com/53127/what-is-ae-af-lock-on-an-iphone-and-how-does-that-help-my-pictures/), and use a tripod. You are encouraged to make use of the photo both in the back of 303. You do not need titles or a spoken explanation—just demonstrate your box doing its thing.

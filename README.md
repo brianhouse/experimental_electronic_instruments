@@ -95,6 +95,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 ### Week 3
 
 #### Monday 9/14
+- Documentation of Noise Box due
 - Workshop: [Introduction to Pd](workshops/pd/pd.md)
 - Workshop: [Synthesis](workshops/pd/synthesis.md)
 
