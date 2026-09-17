@@ -1,6 +1,11 @@
 ## now
 
 
+include amp plugs -- speakers and amps can be a separate, later unit
+
+FM doesn't use an LFO
+
+
 ## materials 
 
 glowforge glue for draftboard
@@ -8,3 +13,21 @@ https://www.amazon.com/Titebond-Woodworking-Furniture-Assembly-Construction/dp/B
 
 
 
+## next
+
+### ac
+
+the ac/ link should be listed somewhere
+
+freqscale~ -> logscale~
+           -> linscale~
+
+
+
+### exercises
+
+intro exercise to find and document an interface
+
+"sound design" shouldnt be continuous, it should be a note played with a single bang, that's the constraint
+
+they should turn in their actual patches

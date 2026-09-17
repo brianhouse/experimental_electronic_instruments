@@ -8,7 +8,7 @@ Let's explore how to create waveforms with Pd.
 All synthesis starts with oscillators. We'll use `ac/vco~` (VCO stands for Voltage-Controlled Oscillator, which is the fundamental building block for most synths; the input here is not "voltage" per se, but the principle is the same). By default, `ac/vco~` outputs a perfect sine wave that oscillates between -1 and 1, which we can also write as `ac/vco~ sin`. However, there are other shapes that we can use: try `ac/vco~ tri`, `ac/vco~ saw`, `ac/vco~ sqr` in your patch and play with the results.
 
 <p align="center">
-  <img src="media/oscillator_shape.png" width=400 /><br />
+  <img src="media/oscillator_shape.png" width=600 /><br />
 </p>
 
 With one oscillator, we're limited to fairly simple tones. But by combining oscillations together in different ways, we can get infinitely complex sounds. The classic techniques used for this are called "additive", "AM", "FM", and "subtractive" synthesis.
@@ -21,7 +21,7 @@ When simple oscillators are added together, they become the building blocks of m
 Using the `+~` object (notice the tilde, which indicates that we are adding audio signals, not numbers), multiple oscillators can be combined. Because this also increases the amplitude of the waveform, we need to divide by the number of signals we are adding.
 
 <p align="center">
-  <img src="media/beating.png" width=400 /><br />
+  <img src="media/beating.png" width=600 /><br />
 </p>
 
 Try making two oscillators with very close frequencies—you'll hear "beating", which is another, implicit oscillation at a frequency that is the difference between the two initial frequencies. Note that dragging on the number boxes in playback mode will increase or decrease by an integer value, but holding shift down will move the decimals.
@@ -48,15 +48,21 @@ In general, even though LFOs aren't heard directly, they can change the characte
 While AM synthesis changes the amplitude of another signal, Frequency Modulation (FM) synthesis changes the frequency instead. Thus far, we have used static values for the frequencies of our oscillators, other than varying them manually with a Number box or slider. However, we can have another oscillator drive this change automatically instead.
 
 <p align="center">
-  <img src="media/FM.png" width=600 /><br />
+  <img src="media/FM_1.png" width=600 /><br />
 </p>
 
-Here, the frequency that we give to `ac/vco~ sin` is determined by another `ac/vco~ sin`. This second oscillator moves between -1 and 1 at 1000 times a second, which when multiplied by 2000 is between -2000 and 2000 at 1000 times a second. The frequency we give to the first oscillator thus becomes a center frequency around which the waveform rapidly oscillates. Varying these parameters results in complex waveforms.
+Here, the frequency that we give to `ac/vco~ sin` is determined by another `ac/vco~ sin`. This second oscillator moves between -1 and 1 at 500 times a second, which when multiplied by 2500 is between -1000 and 100 at 500 times a second. The frequency we give to the first oscillator thus becomes a center frequency around which the waveform rapidly oscillates (and even flips the carrier frequency upside down if carrier < modulation). Varying these parameters results in complex waveforms.
+
+Often, modulation range is expressed as a ratio with the modulation frequency:
+
+<p align="center">
+  <img src="media/FM_2.png" width=600 /><br />
+</p>
 
 
 ## Subtractive Synthesis and Filters
 
-There's another important "oscillator" that we've left out: `noise~`. Unlike the others, `noise~` produces random energy across the audio spectrum, aka "white noise":
+There's another important "oscillator" that we've left out: `noise~`. Unlike the others, `noise~` produces random energy across the audio spectrum, aka "white noise" (we hear this in the physical world whenever there is too much variation for our brains to perceive structure, often with fluid dynamics like wind or rushing water):
 
 <p align="center">
   <img src="media/noise.png" width=600 /><br />
@@ -81,9 +87,9 @@ Try replacing `noise~` with `ac/vco~ saw`—this is the setup that most hardware
 </p>
 
 
-## Distortion
+## Distortion as synthesis
 
-With subtractive synthesis, we're taking a complex signal and filtering out the upper harmonics, making it smoother. But it is also possible to add harmonics back in—this is called, in order of intensity: "saturation", "overdrive", "distortion", or "fuzz".
+With subtractive synthesis, we're taking a complex signal and filtering out the upper harmonics, making it smoother. But another synthesis technique is to add harmonics back in—this is called, in order of intensity: "saturation", "overdrive", "distortion", or "fuzz".
 
 Distortion happens in the analog world when a signal is too "hot" for the equipment and so the peaks and valleys of the amplitude curve get flattened out—imagine yelling into a microphone so loudly that the diaphragm can't move enough to capture the signal. In essence, this "squares off" the wave, which creates added harmonics, in the same way that a regular square wave has a richer sound than a sine oscillator.
 
@@ -100,15 +106,21 @@ This way of doing things doesn't sound that great, however, because it has such 
 </p>
 
 
-## Complex oscillators
+## Scaling and Complex oscillators
 
-Note that this becomes a branching process: any number box can be replaced with another oscillator of some kind, whether it serves as a frequency modulator, an amplitude modulator, or to modulate the rolloff frequency of a filter. Combined, you can produce some dynamic sounds.
+Note that Pd allows this to becomes a branching process: any number box can be replaced with another oscillator of some kind, whether it serves as a frequency modulator, an amplitude modulator, or to modulate the rolloff frequency of a filter.
+
+One very useful technique when creating dynamic sounds is to use `ac/lfo~` and rescale its output, which is 0 to 1, to some other useful range. Because we perceive frequency changes nonlinearly, we can use `ac/freqscale~` to map one range to another logarithmically:
+
+<p align="center">
+  <img src="media/automation.png" width=400 /><br />
+</p>
+
+Replacing all the variable number boxes in a patch with scaled LFOs, you can create a complex oscillator with multiple interacting parts:
 
 <p align="center">
   <img src="media/complex.png" width=800 /><br />
 </p>
-
-Notice how we can use `ac/freqscale~` to change the 0 to 1 range of an LFO to an arbitrary range of frequencies, in this case 150–350 and 500–2000. `ac/freqscale~` uses a logarithmic scale, because we perceive doubling of a frequency as a linear change of one octave.
 
 
 

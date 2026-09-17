@@ -1,23 +1,9 @@
-## fundamental sound concepts
-
-timbre
-frequency
-harmonics / spectrograms / harmonic series
-
-
-digital audio
-
-samples, etc
-
-
-/
-
-effects
+## effects
 
 delay
 chorus
 glitch
-
+bit crush
 
 ## hci
 
@@ -27,10 +13,6 @@ glitch
 
 "audience connection"
 
-
-## exercises
-
-into to find and document an interface
 
 
 ## theory
