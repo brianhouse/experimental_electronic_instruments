@@ -3,4 +3,7 @@ dev
 ac
 *.bak
 *.wav
-reading/notes
+readings/notes
+student_work
+students.txt
+lectures
