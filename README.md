@@ -120,6 +120,9 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Sequencing workshop continued
 - Exercise for next class: [Sequencer](exercises/sequencer.md)
 
+#### Thursday 9/24 @ 5PM
+- Sarah Kahn artist talk, Pruyne Lecture Hall (Fayerweather 115)
+
 
 ### Week 5
 
@@ -167,8 +170,6 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Reading due: Perry Cook, ["Principles for Designing Computer Music Controllers"](readings/cook_controllers.pdf) (2017)
 - Daisy Seed workshop continued
 
-#### Thursday 9/24 @ 5PM
-- Sarah Kahn artist talk, Pruyne Lecture Hall (Fayerweather 115)
  
 
 ### Week 9
