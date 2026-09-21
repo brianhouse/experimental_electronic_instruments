@@ -131,6 +131,10 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Workshop: [Sampling](workshops/pd/sampling.md)
 - Midterm project start
 
+#### Tuesday 9/29 @ 5PM
+- Kate Crawford talk on AI, Lipton Lecture Hall (Science Center)
+
+
 
 #### Wednesday 9/30
 - Presentations #3

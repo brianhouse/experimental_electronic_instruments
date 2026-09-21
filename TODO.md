@@ -1,9 +1,17 @@
 ## now
 
+stairstep lfo shape
+
+if off arrives prior to attack, there’s an error
+
+some issues with the screenshots and envelopes
+
+document spkr to record
+
+
+/
 
 include amp plugs -- speakers and amps can be a separate, later unit
-
-FM doesn't use an LFO
 
 
 ## materials 
