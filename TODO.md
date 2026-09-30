@@ -1,13 +1,6 @@
 ## now
 
-stairstep lfo shape
-
-if off arrives prior to attack, there’s an error
-
 some issues with the screenshots and envelopes
-
-document spkr to record
-
 
 /
 
@@ -23,12 +16,36 @@ https://www.amazon.com/Titebond-Woodworking-Furniture-Assembly-Construction/dp/B
 
 ## next
 
+
+### pd
+
+need line
+
+need switch / spigot / gate
+
+document stairstep lfo
+
+document spkr to record
+
+
 ### ac
 
 the ac/ link should be listed somewhere
 
-freqscale~ -> logscale~
-           -> linscale~
+new version allows messages and signal in same inlet, fix smprecord and others
+
+
+### reading
+
+George Lewis the crank essay
+Perform or Else
+
+
+### presentations
+
+"in the form of a bibliography" so we don't get a list of links
+
+"practice your presentation in room"
 
 
 
@@ -36,6 +53,7 @@ freqscale~ -> logscale~
 
 intro exercise to find and document an interface
 
-"sound design" shouldnt be continuous, it should be a note played with a single bang, that's the constraint
+"sound design" shouldnt be continuous, it should be a note played with a single bang, that's the constraint [maybe]
 
 they should turn in their actual patches
+

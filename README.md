@@ -105,7 +105,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Reading due: Tara Rodgers, ["Synthesis"](readings/rodgers_synthesis.pdf) (2015)
 - Workshop: [Envelopes](workshops/pd/envelopes.md)
 - Exercise for next class: [Sound Design](exercises/sound_design.md)
- 
+<!-- MSHR + something simple, martenot? --> 
 
 ### Week 4
 
@@ -119,6 +119,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 - Reading due: Jaron Lanier, ["Missing Persons" from _You Are Not a Gadget_](readings/lanier_midi.pdf) (2010)
 - Sequencing workshop continued
 - Exercise for next class: [Sequencer](exercises/sequencer.md)
+<!-- do rokeby and jeff mills -->
 
 #### Thursday 9/24 @ 5PM
 - Sarah Kahn artist talk, Pruyne Lecture Hall (Fayerweather 115)
@@ -129,11 +130,10 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 #### Monday 9/28
 - Present Sequencer exercise
 - Workshop: [Sampling](workshops/pd/sampling.md)
-- Midterm project start
+- [Midterm project](projects/midterm.md) start
 
 #### Tuesday 9/29 @ 5PM
 - Kate Crawford talk on AI, Lipton Lecture Hall (Science Center)
-
 
 
 #### Wednesday 9/30

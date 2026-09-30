@@ -22,7 +22,7 @@ From here, you can process the audio live through any of the familiar techniques
 
 In the previous exercise, we manipulated audio samples that we had prepared in Audacity. However, now that we have live input, we can sample from the microphone directly in Pd.
 
-To do this, we'll use `ac/smprecord~`, which takes the name of an array as an argument. This object receives a signal, and by sending it a "record" message, it writes the incoming signal into the array:
+To do this, we'll use `ac/smprecord~`, which takes the name of an array as an argument. This object receives a signal, and when you send it a "start" message, it writes the incoming signal into the array until it receives "stop":
 
 <p align="center">
   <img src="media/live_sampling.png" width=700 /><br />
@@ -35,7 +35,7 @@ Note that the maximum recording time is determined by the number of samples that
 
 Audio input can also be useful not only as a source of audio data, but as a means of triggering events in your patch.
 
-To treat an audio signal in this way, we can use the `ac/onset~` object. `ac/onset~` performs a calculation on the incoming signal to detect whether an "onset" has occurred—ie, the a sudden increase in the signal, like going from silence to noise. If this happens, it outputs a bang.
+To treat an audio signal in this way, we can use the `ac/onset~` object. `ac/onset~` performs a calculation on the incoming signal to detect whether an "onset" has occurred—ie, a sudden increase in the signal, like going from silence to noise. If this happens, it outputs a bang.
 
 Hooking `ac/onset~` up to an envelope generator, for example, can make a voice-triggerable synth note play:
 

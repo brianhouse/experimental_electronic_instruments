@@ -127,7 +127,7 @@ Add an object box to a new patch, and type `ac/vco~ sin`. This is a sine-wave os
 
 Next, connect a `number` box upstream to both inlets of an `ac/spkr~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish audio connections from control connections by their dashed lines, and audio inlets and outlets are orange instead of blue.
 
-`ac/spkr~` is a digital analog converter—it will make our signal into sound. It has a volume control, a mute button, and it also lets you record a wave file: click the checkbox on to start recording, and again to turn it off (note that you will see warnings on the side that `writesf~` and `savepanel` are not supported in Compiled Mode—this is ok for our purposes).
+`ac/spkr~` is a digital analog converter—it will make our signal into sound. It has a volume control and a mute button.
 
 Now, in playback mode, increase the value of the `number` box to 300 or so, and you should hear a "pure" synthesized tone.
 

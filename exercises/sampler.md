@@ -1,5 +1,5 @@
 # Sampler
 
-Create a sequencer in Pd that triggers at least four audio samples that are either sampled from live audio or loaded from files that you **did not** record yourself; in the latter case, use Audacity to convert music, podcasts, field recordings etc into WAV files that can be loaded into `sampler~`. Automatically manipulate your samples in Pd in some way, whether it's changing the playback rate, changing the loop points of the sample, or applying changing effects.
+Create a sampler in Pd that either utilizes a live signal path or incorporates pre-recorded samples. In the latter case, use Audacity to convert music, podcasts, field recordings etc that you **did not** record yourself. Have your patch automatically manipulate your samples in some way. For example, you might modulate the playback rate, change the loop points according to a sequencer, applying changing effects using synthesis techniques, or utilize techniques we have covered thus far. Remember that it's all just signals, so anything can apply.
 
-Turn in a screenshot of the patch as well as one minute of audio.
+Turn in a screenshot of the patch as well as one minute of audio, as well as the .pd file itself.
