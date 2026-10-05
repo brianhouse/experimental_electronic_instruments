@@ -15,7 +15,7 @@
        },
        "button1": {
            "component": "Switch",
-           "pin": 17
+           "pin": 10
        },
        "led1": {
            "component": "Led",

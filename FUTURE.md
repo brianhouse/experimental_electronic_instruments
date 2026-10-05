@@ -1,10 +1,3 @@
-## effects
-
-delay
-chorus
-glitch
-bit crush
-
 ## hci
 
 "friction"

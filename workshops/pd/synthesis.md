@@ -126,7 +126,7 @@ Replacing all the variable number boxes in a patch with scaled LFOs, you can cre
 
 ## Recording a sound file
 
-To record what's happening in your patch, use `ac/recorder~`. This takes two signals, one for each channel, along with an "open" message to choose a path to write to and "start" and "stop" messages to do the thing.
+To record what's happening in your patch, use `ac/recorder~`. This takes two signals, one for each channel, along with an "open" message to choose a path to write to and "start" and "stop" messages to do the thing. `ac/spkr~` has outlets with its two gain-adjusted channels, so you can just connect those right in to `ac/recorder~`.
 
 <p align="center">
   <img src="media/recorder.png" width=800 /><br />

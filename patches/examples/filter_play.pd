@@ -11,9 +11,10 @@
 #X msg 324 92 read pixies.wav;
 #X msg 115 222 stop;
 #X obj 189 405 ac/lpf~;
-#X floatatom 374 365 5 0 0 0 - - - 16;
+#X floatatom 374 411 5 0 0 0 - - - 24;
 #X obj 174 474 ac/spkr~;
-#X obj 374 324 ac/map 0 1 50 8000;
+#X obj 374 324 ac/freqscale~ 0 1 50 8000;
+#X obj 374 375 ac/unsig~;
 #X connect 0 0 4 0;
 #X connect 4 0 8 0;
 #X connect 4 1 2 0;
@@ -23,5 +24,6 @@
 #X connect 7 0 4 0;
 #X connect 8 0 10 0;
 #X connect 8 0 10 1;
-#X connect 9 0 8 1;
-#X connect 11 0 9 0;
+#X connect 11 0 8 1;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;

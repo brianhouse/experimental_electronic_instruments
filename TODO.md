@@ -2,6 +2,8 @@
 
 more cables!
 more strippers!
+more tape!
+more wire!
 
 
 
@@ -33,9 +35,13 @@ document stairstep lfo
 
 document spkr to record
 
-array size needs to be talked about
-
 sensitivity of onset should be noted
+
+onset and follower on a sample
+
+timestretch
+
+wavetable with an array
 
 
 more examples of combining live input
@@ -56,7 +62,15 @@ amen break patch
 
 the ac/ link should be listed somewhere
 
-new version allows messages and signal in same inlet, fix smprecord and others
+new version allows messages and signal in same inlet, fix smprecord so it's one inlet, smpplay~ so it takes signal for rate. recorder~ left outlet?
+
+smpplay~ should be able to jump to an index (for amen break)
+
+
+delay
+chorus
+glitch
+bit crush
 
 
 ### reading

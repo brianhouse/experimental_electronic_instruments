@@ -107,13 +107,11 @@ For example, here's a low-pass filter with the rolloff frequency controlled with
 
 We can, however, also automate a filter change. The right outlet of `ac/smpplay~` gives a value from 0 to 1 corresponding to how far along in the loop playback has progressed. We can use this value to automatically update the cutoff frequency we give to `ac/lpf~`, therefore creating a filter sweep with every loop.
 
-To do this, we're going to use `ac/map`. `ac/map` takes numbers within a given range and rescales them to another range. So for example, if we are getting a signal between 0 and 1 from `ac/smpplay~`'s right outlet, and we want our filter sweep to go from 50 Hz to 8kHz, we could use the arguments `ac/map 0 1 50 8000`.
+To do this, we use `ac/freqscale~` to rescale our position from `ac/smpplay~`'s right outlet, which is between 0 and 1, to our filter sweep, which is from 50 Hz to 8kHz, with the arguments `ac/freqscale~ 0 1 50 8000`.
 
 <p align="center">
   <img src="media/sweep.png" width=600 /><br />
 </p>
-
-(Also, `ac/map~`, with the tilde, works similarly for signals instead of control messages.)
 
 For another example, let's add some tremolo to the output. All this entails is multiplying the output of `ac/smpplay~` by an LFO:
 
