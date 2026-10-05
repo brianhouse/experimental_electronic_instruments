@@ -16,28 +16,32 @@ What's the advantage of using a microcontroller over a computer? It can be integ
 
 ## Circuits
 
-According to the dictionary, in the general sense the word circuit means "a roughly circular line, route, or movement that starts and finishes at the same place." That applies in the electrical sense, too. A circuit is a loop, or rather, it's typically a whole knot of loops, in which electrical current is flowing from "power" back to "ground" and making something happen along the way. Between power and ground, we use positive (+) and negative (-) to indicate the direction of the flow. 
+According to the dictionary, in the general sense the word circuit means "a roughly circular line, route, or movement that starts and finishes at the same place." That applies in the electrical sense, too. A circuit is a loop, or rather, it's typically a whole knot of loops, in which electrical current is flowing from "power" back to "ground" and making something happen along the way. We use `+` (power) and `-` (ground) to indicate which side of the circuit we're on.
 
 When it comes to audio, we can also think of the flow of current in terms of an audio signal. For example, an amplifier takes an audio signal, boosts it with additional current, and then sends it out to a speaker, which transduces that current into physical motion in the air.
 
 When we're working with the Daisy Seed, we're going to be making circuits that run from power to ground through its various "pins" and external components like switches and LEDs.
 
+<p align="center">
+    <img src="media/circuit_loop.png" width="600" />
+</p>
+
 
 ## Pins
 
-So what are pins? They are the connection points on the seed, the legs to which we can attach electrical components to make circuits. The diagram below is a "pinout" diagram that shows which is which. There are pins to connect stereo audio output (L OUT, R OUT) and input (L IN, R IN), a power source (VIN), output to + (VOUT), and connections to - (GND). The rest of the pins are general purpose pins for buttons, switches, etc.
+So what are pins? They are the connection points on the seed, the legs to which we can attach electrical components to make circuits. The diagram below is a "pinout" diagram that shows which is which. There are pins to connect stereo audio output (L OUT, R OUT), input (L IN, R IN), a 3V power source `+`, and ground `-`. There is a pin to hook up a battery, which we will ignore for now. The rest of the pins are general purpose pins for buttons, switches, etc.
 
 
 <p align="center">
     <img src="media/daisy_pinout.jpg" width="600" />
 </p>
 
-To begin, we're going to set things up for prototyping on a breadboard.
+So how do we make connections?
 
 
 ## Breadboards
 
-While we can make permanent circuits by soldering on perf boards, it's much easier to experiment using breadboards.
+While we can make permanent circuits by soldering on "perf" boards, it's much easier to experiment using breadboards.
 
 Breadboards are awesome because they let us work through our circuit ideas quickly and reward experimentation. Wires can sometimes pop loose, but that's a small price to pay for not having to undo soldered connections to change something.
 
@@ -57,34 +61,41 @@ As a result:
 
 ### Power Rails
 
-Those long strips of connected holes on the top and bottom of the breadboard are called "power rails." We'll set things up so that + runs through the red strips and - runs through the blue/black ones. This gives us lots of points to connect to power and ground.
+Those long strips of connected holes on the top and bottom of the breadboard are called "power rails." We'll set things up so that `+` runs through the red strips and `-` runs through the blue/black ones. This gives us lots of points to connect to power and ground.
 
 
-## Shorting
-
-There is basically only one rule. And that is that when we create a circuit, it must include some kind of resistance to limit the amount of current that can flow. Otherwise ... BOOM. Fried chip. 
-
-**Do not connect any pin to ground (-) other than GND without resistance in-between**
-
-We'll learn what constitutes resistance as we go.
+<p align="center">
+    <img src="media/power_rail.png" width="800" />
+</p>
 
 
-## Setup
+### Shorting
 
-Put the seed on the breadboard like in the image below. The numbers and letters on the breadboard don't matter, so don't get confused when we talk about the pins on the seed—the ones in the diagram above are what we're referring to.
+There is basically only one rule when we make connections. And that is that when we create a circuit, it must include some kind of resistance to limit the amount of current that can flow. Otherwise ... BOOM. Fried chip. 
+
+<p align="center">
+    <img src="media/short_sign.png" width="600" />
+</p>
+
+
+What's a resistor? We'll learn that as we go.
+
+
+
+## Breadboard setup
+
+Put the seed on the breadboard like in the image below. Pushing the pins into the board can feel a bit scary, be careful but firm.
 
 <p align="center">
     <img src="media/setup_bb.png" width="1000" />
 </p>
 
 
-Notice below how both ground pins are connected to - on the power rail. VOUT feeds + to the rail, and then we have two wires that run across the board so that both rails are connected to each other.
+Notice below how both power and ground pins are connected to the approprimate strips on the power rail. We also have two wires that run across the board so that both rails are connected to each other. As a convention, I use red wires for `+` and black for `-`.
 
-As a convention, I use red wires to connect to + on the power rail, and black for -. All other wires are some other color. This helps to keep things straight when we're debugging circuits. 
+For now, BAT isn't connected to anything—our power source will be the USB jack, so we won't use a battery.
 
-For now, VIN isn't connected to anything—our input source will be the USB jack.
-
-This will always be our the basic starting point when wiring things up with the seed.
+This will always be our the basic starting point when wiring things up with the seed. Note that the numbers and letters on the breadboard don't matter, so don't get confused when we talk about the pins on the seed—the ones in the diagram above are what we're referring to.
 
 
 
@@ -96,11 +107,11 @@ Starting with our basic setup, we can begin to attach other elements. To begin w
 
 
 
-A button (or "momentary switch") has two sides, each with two pins. When you press the button, everything is connected together. Notice that one side is connected to +, and the other side is connected to - _through a resistor_.
+A button (or "momentary switch") has two sides, each with two pins. When you press the button, everything is connected together. Notice that one side is connected to `+`, and the other side is connected to `-` _through a resistor_.
 
-A resistor is a component whose job it is to limit current. Depending on the situation, we'll use resistors with different values. In this case, it's 10kΩ.
+A resistor is a component whose job it is to limit current. Depending on the situation, we'll use resistors with different values. In this case, it's 10kΩ ("ohms).
 
-Finally, we connect a wire between a pin on the seed and the ground side of the button. If the button isn't pressed, the pin will show that it's connected to - (via the resistor). If the button _is_ pressed, it will show that it is connected to +. 
+Finally, we connect a wire between a pin on the seed and the ground side of the button. If the button isn't pressed, the pin will show that it's connected to `-` (via the resistor). If the button _is_ pressed, it will show that it is connected to `+`. 
 
 In this case, I used pin 10. No relation to the breadboard number which happens to be right next to it, you have to count the pins on the seed itself and follow the pinout diagram.
 
