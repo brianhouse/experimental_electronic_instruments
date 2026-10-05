@@ -1,10 +1,16 @@
 ## now
 
+more cables!
+more strippers!
+
+
+
 some issues with the screenshots and envelopes
+
 
 /
 
-include amp plugs -- speakers and amps can be a separate, later unit
+- daisy.md: hello world patch with a button that plays
 
 
 ## materials 
@@ -17,7 +23,7 @@ https://www.amazon.com/Titebond-Woodworking-Furniture-Assembly-Construction/dp/B
 ## next
 
 
-### pd
+### pd / ac
 
 need line
 
@@ -27,8 +33,26 @@ document stairstep lfo
 
 document spkr to record
 
+array size needs to be talked about
 
-### ac
+sensitivity of onset should be noted
+
+
+more examples of combining live input
+- follower -> lfo
+- follower + onset
+- follower + fm
+- onset to start recording
+
+
+wavetable synthesis?
+
+gain slider
+
+amen break patch
+—> would be better just to jump the start point
+
+
 
 the ac/ link should be listed somewhere
 
@@ -46,6 +70,8 @@ Perform or Else
 "in the form of a bibliography" so we don't get a list of links
 
 "practice your presentation in room"
+
+“three questions at the end”
 
 
 
