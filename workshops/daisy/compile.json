@@ -7,20 +7,19 @@
    "components": {
        "knob1": {
            "component": "AnalogControl",
-           "pin": 15
+           "pin": 17
        },
-       "toggle1": {
-           "component": "Switch",
-           "pin": 16
-       },
-       "button1": {
+       "toggle10": {
            "component": "Switch",
            "pin": 10
        },
+       "led0": {
+            "component": "UserLed"
+       },
        "led1": {
            "component": "Led",
-           "pin": 14
+           "invert": "false",
+           "pin": 15
        }
-
    }
 }

@@ -73,6 +73,8 @@ glitch
 bit crush
 
 
+ac/seed ?
+
 ### reading
 
 George Lewis the crank essay
