@@ -1,11 +1,9 @@
 ## now
 
-more cables!
-more strippers!
-more tape!
-more wire!
 
-
+need micros also!
+need small breadboards
+solder the powerboosts
 
 some issues with the screenshots and envelopes
 

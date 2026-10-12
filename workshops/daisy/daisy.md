@@ -1,5 +1,21 @@
 # Getting started with the Daisy Seed
 
+<!--
+
+finish pinout
+
+1/4" jacks
+1/4" cables
+stranded wire
+headers
+
+-->
+
+### Materials
+
+### Tools
+
+
 ## Microcontrollers
 
 The Daisy Seed is a microcontroller designed for audio.
@@ -38,7 +54,7 @@ However, most of what we'll do with the Daisy Seed is more like the "control" co
 
 ## Pins
 
-The legs of the seed are connection points, called pins.
+The legs of the Daisy are connection points, called pins.
 
 The diagram below is a "pinout" diagram that shows which is which. Most of these pins are, in essence, sensors that can measure voltage. We can receive the values from these pins in our Pd patches to control buttons, toggles, and sliders. "Digital" pins (color) only work for detecting "on" and "off"; ie, buttons and toggles. "Analog" pins (color) can be a range; sliders.
 
@@ -101,7 +117,7 @@ There is basically only one rule when we make connections. And that is that when
 
 ## Breadboard setup
 
-Put the seed on the breadboard like in the image below. Pushing the pins into the board can feel a bit scary, be careful but firm.
+Put the Daisy on the breadboard like in the image below. Pushing the pins into the board can feel a bit scary, be careful but firm.
 
 <p align="center">
     <img src="media/setup_bb.png" width="1000" />
@@ -112,7 +128,7 @@ Notice how both power and ground pins are connected to the approprimate strips o
 
 For now, BAT isn't connected to anything—our power source will be the USB jack, so we won't use a battery.
 
-This will always be our basic starting point when wiring things up with the seed. Note that the numbers and letters on the breadboard don't matter, so don't get confused when we talk about the pins on the seed—the ones in the diagram above are what we're referring to.
+This will always be our basic starting point when wiring things up with the Daisy. Note that the numbers and letters on the breadboard don't matter, so don't get confused when we talk about the pins on the Daisy—the ones in the diagram above are what we're referring to.
 
 
 
@@ -122,9 +138,11 @@ This will always be our basic starting point when wiring things up with the seed
 
 Starting with our basic setup, we can begin to attach other elements. To begin with, let's add a button:
 
+<p align="center">
+    <img src="media/hello_world_bb.png" width="800" />
+</p>
 
-
-A button (or "momentary switch") has two sides, each with two pins. When you press the button, everything is connected together. Notice that one side is connected to a pin (I use green wires for measuring connections), and the other side is connected to `-`. I used pin 10. No relation to the breadboard number which happens to be right next to it, you have to count the pins on the seed itself and follow the pinout diagram.
+A button (or "momentary switch") has two sides, each with two pins. When you press the button, everything is connected together. Notice that one side is connected to a pin (I use green wires for measuring connections), and the other side is connected to `-`. I used pin 10. No relation to the breadboard number which happens to be right next to it, you have to count the pins on the Daisy itself and follow the pinout diagram.
 
 In this most basic case, all the pin is measuring is whether it's connected to ground or not. That's why we don't even use a `+` connection.
 
@@ -136,7 +154,7 @@ So how do we use this?
 
 In Pd, open a new patch. Create a toggle. Going into the toggle will be the output off our button. We get that by creating a new object and calling it (bear with me) `r toggle10_press @hv_param`.
 
-Coming out of the toggle will be another object, `s led0 @hv_param`. This one controls one of the LEDs on the seed.
+Coming out of the toggle will be another object, `s led0 @hv_param`. This one controls one of the LEDs on the Daisy.
 
 <p align="center">
     <img src="media/hello_1.png" width="400" />
@@ -154,7 +172,7 @@ Then you'll get to the compiler window. Make sure you have "Electro-Smith Daisy"
     <img src="media/compiler.png" width="600" />
 </p>
 
-Plug in your seed. Notice that it has two buttons, "boot" and "reset" (very small type). 
+Plug in your Daisy. Notice that it has two buttons, "boot" and "reset" (very small type). 
 
 1. Press and hold the Boot button
 1. Press and release the Reset button
@@ -169,7 +187,7 @@ If it works, you'll see this (misleading, I know):
 </p>
 
 
-...but if you get this message, your seed isn't connected properly or you haven't done the button thing correctly:
+...but if you get this message, your Daisy isn't connected properly or you haven't done the button thing correctly:
 
 <p align="center">
     <img src="media/bad_fail.png" width="600" />
@@ -182,7 +200,7 @@ Anything else means there's something wrong with the patch. Scroll up in the err
 </p>
 
 
-If all goes well, push the button. You should see a light on the seed turn on.
+If all goes well, push the button. You should see a light on the Daisy turn on.
 
 
 ### Adding audio
@@ -195,12 +213,12 @@ Expand your Pd patch to include a simple oscillator controlled by a button. Some
 </p>
 
 
-Note the use of `loadbang` to initialize the oscillator; your patch should work without any extra mouse clicks that aren't connected to an `@hv_param` seed object. Check that it works well on your computer by closing the patch and opening it again. Then repeat the steps above to flash it to your seed.
+Note the use of `loadbang` to initialize the oscillator; your patch should work without any extra mouse clicks that aren't connected to an `@hv_param` Daisy object. Check that it works well on your computer by closing the patch and opening it again. Then repeat the steps above to flash it to your Daisy.
 
-To hear it, we're going to need to connect something to `L OUT` on the seed. The most straightforward option is to use a 1/4" mono audio jack—aka, a plug for a guitar cable.
+To hear it, we're going to need to connect something to `L OUT` on the Daisy. The most straightforward option is to use a 1/4" mono audio jack—aka, a plug for a guitar cable.
 
-- prepare the jack (use stranded wire)
-- connect to the seed
+- prepare the jack (use stranded wire soldered to headers)
+- connect to the Daisy
 - plug into the amp
 
 Turn it on and boogie
