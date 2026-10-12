@@ -4,6 +4,7 @@
 need micros also!
 need small breadboards
 solder the powerboosts
+zip ties
 
 some issues with the screenshots and envelopes
 

@@ -12,8 +12,14 @@ headers
 -->
 
 ### Materials
-
-### Tools
+- Daisy Seed 3
+- Large breadboard
+- Solid core: red + black + green
+- Stranded: orange + blue
+- USB-C cable
+- Breaboard momentary switch (button)
+- 1/4" TS socket (guitar jack)
+- 1/4" TS cable (guitar cable)
 
 
 ## Microcontrollers
@@ -203,10 +209,10 @@ Anything else means there's something wrong with the patch. Scroll up in the err
 If all goes well, push the button. You should see a light on the Daisy turn on.
 
 
-### Adding audio
+## Adding audio
 
 
-Expand your Pd patch to include a simple oscillator controlled by a button. Something like this:
+The next step is to expand your Pd patch to include a simple oscillator controlled by the button. Something like this:
 
 <p align="center">
     <img src="media/hello_2.png" width="600" />    
@@ -217,11 +223,60 @@ Note the use of `loadbang` to initialize the oscillator; your patch should work 
 
 To hear it, we're going to need to connect something to `L OUT` on the Daisy. The most straightforward option is to use a 1/4" mono audio jack—aka, a plug for a guitar cable.
 
-- prepare the jack (use stranded wire soldered to headers)
-- connect to the Daisy
-- plug into the amp
 
-Turn it on and boogie
+### Preparing the jack
+
+To connect a guitar jack to our circuit, we'll use "stranded" wire instead of "solid core" like we've used on the breadboard. While solid core wire is easier to work with, and easily slides into the breadboard, it is inflexible. Stranded wire has much more play, and so we use it to connect hardware that isn't directly on the breadboard, such as switches or dials mounted to a panel, or jacks, as in this case.
+
+Cut off 6" of stranded wire for positive (orange) and negative (blue) connections.
+
+In order to get our stranded wire into the breadboard, we need to solder it to header pins. Break off some header pins to use:
+
+<p align="center">
+    <img src="media/hello_2.png" width="600" />    
+</p>
+
+After stripping a half-inch of insulation off of your stranded wire and twisting the strands together, wrap it around the short side of the pin, and hold it in some helping hands (this is hard):
+
+<p align="center">
+    <img src="media/header_wrapped.png" width="400" />    
+</p>
+
+Solder the wire to the pin:
+
+<p align="center">
+    <img src="media/header_soldered.png" width="400" />    
+</p>
+
+
+Next, twist the other end, and loop it through a hole on one of the jack's tabs. Look carefully at the jack to determine which tab is positive (ie, attaches to the "tip" of the cable) and which is negative (the sleeve).
+
+<p align="center">
+    <img src="media/jack_1.png" width="400" />    
+</p>
+
+Solder the tab so that the hole fills with solder:
+
+<p align="center">
+    <img src="media/jack_2.png" width="400" />    
+</p>
+
+
+Repeat this process for the other wire. When both are ready, plug sleeve / `-` into ground and tip / `+` into `L OUT`:
+
+
+<p align="center">
+    <img src="media/hello_world_jack_bb.png" width="800" />    
+</p>
+
+For the moment, you can secure the jack with a zip tie: 
+
+
+<p align="center">
+    <img src="media/hello_world_jack.png" width="800" />    
+</p>
+
+(Carefully) plug in your guitar cable, turn on your amp, and press the button. You should see the LED turn on, and you should hear your oscillator through the amplifier.
 
 
 
