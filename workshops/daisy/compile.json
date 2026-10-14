@@ -5,21 +5,20 @@
      "channels": 2
    },
    "components": {
-       "knob1": {
-           "component": "AnalogControl",
-           "pin": 17
-       },
        "toggle10": {
            "component": "Switch",
            "pin": 10
        },
+       "bang9": {
+            "component": "Switch",
+            "pin": 9
+       },
+       "slider15": {
+           "component": "AnalogControl",
+           "pin": 15
+       },
        "led0": {
             "component": "UserLed"
-       },
-       "led1": {
-           "component": "Led",
-           "invert": "false",
-           "pin": 15
        }
    }
 }

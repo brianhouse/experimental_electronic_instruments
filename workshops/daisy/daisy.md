@@ -1,15 +1,5 @@
 # Getting started with the Daisy Seed
 
-<!--
-
-finish pinout
-
-1/4" jacks
-1/4" cables
-stranded wire
-headers
-
--->
 
 ### Materials
 - Daisy Seed 3
@@ -17,7 +7,7 @@ headers
 - Solid core: red + black + green
 - Stranded: orange + blue
 - USB-C cable
-- Breaboard momentary switch (button)
+- Breadboard momentary switch (button)
 - 1/4" TS socket (guitar jack)
 - 1/4" TS cable (guitar cable)
 
@@ -65,10 +55,10 @@ The legs of the Daisy are connection points, called pins.
 The diagram below is a "pinout" diagram that shows which is which. Most of these pins are, in essence, sensors that can measure voltage. We can receive the values from these pins in our Pd patches to control buttons, toggles, and sliders. "Digital" pins (color) only work for detecting "on" and "off"; ie, buttons and toggles. "Analog" pins (color) can be a range; sliders.
 
 In addition, there are some special pins:
-- stereo audio output (L OUT, R OUT)
-- stereo audio input (L IN, R IN)
+- stereo audio output (R OUT, L OUT)
+- stereo audio input (R IN, L IN)
 - MIDI in and MIDI out
-- SDL and SDA (data connections)
+- SCL and SDA (data connections)
 - battery connection
 - power  `+`
 - ground `-`
@@ -130,7 +120,7 @@ Put the Daisy on the breadboard like in the image below. Pushing the pins into t
 </p>
 
 
-Notice how both power and ground pins are connected to the approprimate strips on the power rail. We also have two wires that run across the board so that both rails are connected to each other. As a convention, I use red wires for connections to `+` and black for `-`.
+Notice how both power and ground pins are connected to the approximate strips on the power rail. We also have two wires that run across the board so that both rails are connected to each other. As a convention, I use red wires for connections to `+` and black for `-`.
 
 For now, BAT isn't connected to anything—our power source will be the USB jack, so we won't use a battery.
 
@@ -148,7 +138,7 @@ Starting with our basic setup, we can begin to attach other elements. To begin w
     <img src="media/hello_world_bb.png" width="800" />
 </p>
 
-A button (or "momentary switch") has two sides, each with two pins. When you press the button, everything is connected together. Notice that one side is connected to a pin (I use green wires for measuring connections), and the other side is connected to `-`. I used pin 10. No relation to the breadboard number which happens to be right next to it, you have to count the pins on the Daisy itself and follow the pinout diagram.
+A button (or "momentary switch") has two sides, each with two pins. When you press the button, everything is connected together. Notice that one side is connected to a pin (I use green wires for measuring connections), and the other side is connected to `-`. I used pin 10. **No relation to the breadboard number which happens to be right next to it, and no relation to any numbers printed on the Daisy itself.** You have to look at the physical pins/solder points on the Daisy and follow the pinout diagram.
 
 In this most basic case, all the pin is measuring is whether it's connected to ground or not. That's why we don't even use a `+` connection.
 
@@ -158,21 +148,21 @@ So how do we use this?
 ### Pd patch
 
 
-In Pd, open a new patch. Create a toggle. Going into the toggle will be the output off our button. We get that by creating a new object and calling it (bear with me) `r toggle10_press @hv_param`.
+In Pd, open a new patch. Create a toggle. Going into the toggle will be the output from our button. We get that by creating a new object, `ac/daisyin toggle 10`.
 
-Coming out of the toggle will be another object, `s led0 @hv_param`. This one controls one of the LEDs on the Daisy.
+Coming out of the toggle will be another object, `ac/daisyout led 0`. This one controls one of the LEDs on the Daisy.
 
 <p align="center">
     <img src="media/hello_1.png" width="400" />
 </p>
 
-Now choose "Compile" under the main menu. You should be prompted to install or update your "toolchain" if you haven't already. Go ahead and do this.
+Now choose "Compile" under the main menu. Compiling converts our patch into firmware for the Daisy. You should be prompted to install or update your "toolchain" if you haven't already. Go ahead and do this.
 
 <p align="center">
     <img src="media/toolchain.png" width="600" />
 </p>
 
-Then you'll get to the compiler window. Make sure you have "Electro-Smith Daisy" selected, and for the target board, choose "Custom JSON". This should open a dialog box, where you'll select [compile.json](compile.json) that you've downloded from github via Moodle.
+Then you'll get to the compiler window. Make sure you have "Electro-Smith Daisy" selected, and for the target board, choose "Custom JSON". This should open a dialog box, where you'll select [compile.json](compile.json) that you've downloaded from github via Moodle.
 
 <p align="center">
     <img src="media/compiler.png" width="600" />
@@ -184,7 +174,7 @@ Plug in your Daisy. Notice that it has two buttons, "boot" and "reset" (very sma
 1. Press and release the Reset button
 1. Let go of the Boot button
 
-Now you're ready. Click Flash and cross your fingers. 
+Now you're ready. Click Flash and cross your fingers ("flash" means load firmware onto a microcontroller).
 
 If it works, you'll see this (misleading, I know):
 
@@ -219,7 +209,7 @@ The next step is to expand your Pd patch to include a simple oscillator controll
 </p>
 
 
-Note the use of `loadbang` to initialize the oscillator; your patch should work without any extra mouse clicks that aren't connected to an `@hv_param` Daisy object. Check that it works well on your computer by closing the patch and opening it again. Then repeat the steps above to flash it to your Daisy.
+Note the use of `loadbang` to initialize the oscillator (ACK! a bug in Pd right now means we have to use `sig~` for this instead!); your patch should work without any extra mouse clicks that aren't connected to a Daisy object. Check that it works well on your computer by closing the patch and opening it again. Then repeat the steps above to flash it to your Daisy.
 
 To hear it, we're going to need to connect something to `L OUT` on the Daisy. The most straightforward option is to use a 1/4" mono audio jack—aka, a plug for a guitar cable.
 
@@ -233,7 +223,7 @@ Cut off 6" of stranded wire for positive (orange) and negative (blue) connection
 In order to get our stranded wire into the breadboard, we need to solder it to header pins. Break off some header pins to use:
 
 <p align="center">
-    <img src="media/hello_2.png" width="600" />    
+    <img src="media/headers.png" width="600" />    
 </p>
 
 After stripping a half-inch of insulation off of your stranded wire and twisting the strands together, wrap it around the short side of the pin, and hold it in some helping hands (this is hard):

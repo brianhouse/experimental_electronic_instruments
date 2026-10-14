@@ -1,17 +1,35 @@
 ## now
 
+finish pinout
 
-need micros also!
+gather headers
+gather micro-USB, and adapters
+
 need small breadboards
 solder the powerboosts
 zip ties
 
 some issues with the screenshots and envelopes
 
+link to compile.json (in google docs? download as txt?)
 
-/
 
-- daisy.md: hello world patch with a button that plays
+gotchas:
+- audio input / samples / etc
+- sensors
+
+
+## problems
+
+vco~: frequency (left)
+lfo~: frequency (left)
+lpf~: rolloff (right)
+hpf~: rolloff (right)
+pan~: pan (right)
+dist~: gain (right)
+freqscale~: input (left)
+rescale~: input (left). Lower risk, since people rarely send it a plain number.
+
 
 
 ## materials 
@@ -31,8 +49,6 @@ need line
 need switch / spigot / gate
 
 document stairstep lfo
-
-document spkr to record
 
 sensitivity of onset should be noted
 
@@ -55,15 +71,13 @@ wavetable synthesis?
 gain slider
 
 amen break patch
-—> would be better just to jump the start point
-
+smpplay~ should be able to jump to an index (for amen break)
 
 
 the ac/ link should be listed somewhere
 
 new version allows messages and signal in same inlet, fix smprecord so it's one inlet, smpplay~ so it takes signal for rate. recorder~ left outlet?
 
-smpplay~ should be able to jump to an index (for amen break)
 
 
 delay

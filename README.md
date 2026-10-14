@@ -167,19 +167,19 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 ### Week 8
 
 #### Monday 10/19
-- Workshop: Introduction to Daisy Seed (compiling, speakers, buttons, dials)
+- Workshop: [Introduction to Daisy Seed](workshops/daisy/daisy.md)
 
 #### Wednesday 10/21
 - Presentations #6
 - Reading due: Perry Cook, ["Principles for Designing Computer Music Controllers"](readings/cook_controllers.pdf) (2017)
-- Daisy Seed workshop continued
+- Workshop: [Switches + sliders (and lights)](workshops/daisy/interface.md)
 
  
 
 ### Week 9
 
 #### Monday 10/26
-- Workshop: Sensors
+- Workshop: [Portable Power and Sound](workshops/daisy/power.md)
 
 #### 5:30PM
 - Rapaport Lecture, An-My Lê Moses, Pruyne Lecture Hall (Fayerweather 115)
@@ -189,7 +189,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 #### Wednesday 10/28
 - Presentations #7
 - Reading due: Atau Tanaka, ["Musical Performance Practice on Sensor-Based Instruments"](readings/tanaka_sensors.pdf) (2000)
-- Workshop: IMUs
+- Workshop: [Sensors](workshops/daisy/sensors.md)
 - Exercise for next class: [Prototype](exercises/prototype.md)
  
 
