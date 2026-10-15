@@ -7,8 +7,6 @@
 #X obj 576 106 ac/daisyin toggle 10;
 #X obj 576 204 ac/daisyout led 0;
 #X obj 342 224 sig~ 200;
-#X text 231 171 there is a bug in Pd—we have to give vco~ and lfo~;
-#X text 229 188 a sig~ instead of float values;
 #X connect 0 0 2 0;
 #X connect 0 0 6 0;
 #X connect 1 0 3 0;

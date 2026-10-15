@@ -1,6 +1,15 @@
 ## now
 
+sliders
+leds
 finish pinout
+loading audio
+
+/
+
+yellow wire, and some stranded kind
+
+
 
 gather headers
 gather micro-USB, and adapters
@@ -20,6 +29,10 @@ gotchas:
 
 
 ## problems
+
+sig~ is arguably a better paradigm than loadbang anyway
+
+documentation should emphasize links
 
 vco~: frequency (left)
 lfo~: frequency (left)
@@ -85,6 +98,7 @@ chorus
 glitch
 bit crush
 
+granular
 
 ac/seed ?
 

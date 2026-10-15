@@ -52,7 +52,9 @@ However, most of what we'll do with the Daisy Seed is more like the "control" co
 
 The legs of the Daisy are connection points, called pins.
 
-The diagram below is a "pinout" diagram that shows which is which. Most of these pins are, in essence, sensors that can measure voltage. We can receive the values from these pins in our Pd patches to control buttons, toggles, and sliders. "Digital" pins (color) only work for detecting "on" and "off"; ie, buttons and toggles. "Analog" pins (color) can be a range; sliders.
+The diagram below is a "pinout" diagram that shows which is which. Most of these pins are, in essence, sensors that can measure voltage. We can receive the values from these pins in our Pd patches to control buttons, toggles, and sliders.
+
+"Digital" pins (color) only work for detecting "on" and "off"; ie, buttons and toggles. "Analog" pins (color) can be a range; sliders. All of these pins can also be used as a voltage source to do things like turn on an LED.
 
 In addition, there are some special pins:
 - stereo audio output (R OUT, L OUT)

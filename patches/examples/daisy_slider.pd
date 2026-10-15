@@ -1,0 +1,13 @@
+#N canvas 827 239 734 565 12;
+#X obj 482 163 hsl 128 17 0 1 0 0 empty empty empty -2 -8 0 10 #191919 #e1e1e1 #e1e1e1 0 1;
+#X obj 479 392 ac/spkr~;
+#X obj 479 199 sig~;
+#X obj 479 292 ac/vco~ tri;
+#X obj 479 239 ac/freqscale~ 0 1 50 2000;
+#X obj 479 110 ac/daisyin slider 16;
+#X connect 0 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 3 0;
+#X connect 5 0 0 0;

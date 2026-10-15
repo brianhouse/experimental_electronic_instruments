@@ -13,9 +13,13 @@
             "component": "Switch",
             "pin": 9
        },
-       "slider15": {
+       "slider16": {
            "component": "AnalogControl",
-           "pin": 15
+           "pin": 16
+       },
+       "led3": {
+            "component": "Led",
+            "pin": 3
        },
        "led0": {
             "component": "UserLed"

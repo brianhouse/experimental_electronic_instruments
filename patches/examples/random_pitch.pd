@@ -2,7 +2,7 @@
 #X obj 418 163 random 6;
 #X floatatom 418 193 5 0 0 0 - - - 12;
 #X obj 418 237 select 0 1 2 3 4 5;
-#X obj 417 393 ac/vco~ tri;
+#X obj 410 427 ac/vco~ tri;
 #X obj 499 449 ac/eg~ 200 100 400 0.5 200;
 #X obj 417 475 *~;
 #X obj 417 526 ac/spkr~;
@@ -25,6 +25,7 @@
 #X text 274 148 on bang \, output an integer less than 6 to select between notes, f 17;
 #X text 627 103 choose 400 or 800 as a duration, f 17;
 #X obj 531 415 del 400;
+#X obj 410 390 sig~;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 16 0;
@@ -47,13 +48,15 @@
 #X connect 12 0 9 1;
 #X connect 13 0 9 1;
 #X connect 14 0 9 0;
-#X connect 15 0 3 0;
 #X connect 15 0 22 0;
+#X connect 15 0 26 0;
 #X connect 16 0 15 0;
 #X connect 17 0 15 0;
+#X connect 18 0 15 0;
 #X connect 19 0 15 0;
 #X connect 20 0 15 0;
 #X connect 21 0 15 0;
 #X connect 22 0 7 0;
 #X connect 22 0 25 0;
 #X connect 25 0 8 0;
+#X connect 26 0 3 0;
