@@ -134,7 +134,11 @@ You should hear a "pure" synthesized tone.
 </p>
 
 
-Note that Pd will prevent you from connecting a signal outlet to a control inlet. However, it will not prevent you from connecting a control outlet to a signal inlet. **But don't do it**—it will cause problems later on with the Daisy. To convert from control to signal, use `sig~` (and to convert back, you can use `ac/unsig~`):
+Note that Pd will prevent you from connecting a signal outlet to a control inlet. It will not prevent you from connecting a control outlet to a signal inlet. However,
+
+**Don't connect a blue outlet to an orange inlet**
+
+...it will cause problems later on with the Daisy. To convert from control to signal, use `sig~` (and to convert back, you can use `ac/unsig~`):
 
 <p align="center">
   <img src="media/sig.png" width=600 /><br />
