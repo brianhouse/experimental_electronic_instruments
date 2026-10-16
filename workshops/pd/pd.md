@@ -117,7 +117,7 @@ Instead of always using both inlets, you can add a default value as a parameter 
 
 Audio signals flow a little differently than messages, because they are continuous—if there is a connection between two audio objects, data is always flowing.
 
-What is an audio object? We know that an object handles audio if its name ends in a tilde ("~").
+What is an signal object? We know that an object handles signals if its name ends in a tilde ("~"). 
 
 Add an object box to a new patch, and type `ac/vco~ sin`. This is a sine-wave oscillator.
 
@@ -125,15 +125,24 @@ Add an object box to a new patch, and type `ac/vco~ sin`. This is a sine-wave os
   <img src="media/osc.png" width=400 /><br />
 </p>
 
-Next, connect a `number` box upstream to both inlets of an `ac/spkr~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish audio connections from control connections by their dashed lines, and audio inlets and outlets are orange instead of blue.
+Next, connect a `sig~` box upstream to both inlets of an `ac/spkr~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish signal connections from control connections by their dashed lines, and signal inlets and outlets are orange instead of blue.
 
-`ac/spkr~` is a digital analog converter—it will make our signal into sound. It has a volume control and a mute button.
-
-Now, in playback mode, increase the value of the `number` box to 300 or so, and you should hear a "pure" synthesized tone.
+You should hear a "pure" synthesized tone.
 
 <p align="center">
   <img src="media/output.png" width=400 /><br />
 </p>
+
+
+Note that Pd will prevent you from connecting a signal outlet to a control inlet. However, it will not prevent you from connecting a control outlet to a signal inlet. **But don't do it**—it will cause problems later on with the Daisy. To convert from control to signal, use `sig~` (and to convert back, you can use `ac/unsig~`):
+
+<p align="center">
+  <img src="media/sig.png" width=600 /><br />
+</p>
+
+
+`ac/spkr~` is a digital analog converter—it will make our signal into sound. It has a volume control and a mute button.
+
 
 Let's get a better sense of what's going on here by making a visual output as well. Create an `ac/scope~` object (which is one of the externals we added at the beginning).
 
@@ -156,13 +165,14 @@ If you click the `slider`, you will see a panel that sets various properties. Se
 Congratulations, you've made your first synthesizer! (Now make sure to save it).
 
 
-## `loadbang`
+## `sig~` and `loadbang`
 
-In general, remember to **SAVE YOUR WORK**
+Remember to **SAVE YOUR WORK**
 
-...but note that the numbers in your boxes aren't saved with the patch! If you find a combination you like, supply them as default values for each of the oscillators, or put them in messages that you can click or bang to restore the values.
+If you put a default value (an "argument") in a `sig~` box, it will save with the patch.
 
-One very helpful object for this is called `loadbang`—it sends a bang when the patch is loaded. Attach this to a message to set a value.
+However, keep in mind that the values in number boxes will not save. If you need a particular value in a number box, put it in a message instead, and use `loadbang`, which sends a bang when the patch is loaded.
+
 
 <p align="center">
   <img src="media/loadbang.png" width=400 /><br />
