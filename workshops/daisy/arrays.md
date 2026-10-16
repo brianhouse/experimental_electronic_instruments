@@ -24,7 +24,7 @@ Once we do this, we should be able to trigger playback of the sample.
     <img src="media/daisy_playback_pd.png" width="900" />
 </p>
 
-...however, there is a significant limits:
+...however, there is a significant limit:
 
 **The maximum total time for all preloaded samples is ~2.5 seconds**
 
@@ -34,12 +34,12 @@ That's not a lot. And to get that much, we need to change a setting on compile:
     <img src="media/sdram.png" width="600" />
 </p>
 
-"Huge" here is the 512KB size of a patch, saved arrays included. But apart from this restriction, preloaded samples work.
+"Huge" here is the 512KB size of internal RAM of the program, saved arrays included. But apart from this restriction, preloaded samples work.
 
 
 ## Recording Samples
 
-Thankfully, the size restriction doesn't apply to recording samples while the Daisy is running. For that, we have the full SDRAM capacity, which is 64MB, over 5 minutes.
+Thankfully, the size restriction doesn't apply to recording samples while the Daisy is running. For that, we have the full SDRAM capacity, which is 64MB, over 5 minutes. Compiling with "Huge + SDRAM" applies here as well.
 
 Like always, when we create the array, we have to specify its maximum size in samples (number of seconds x 48,000). This time, we'll also put that maximum size as the second argument in the recorder: `ac/smprecord~ ARRAYNAME ARRAYSIZE`. This ensures that we'll always stay within bounds. We don't need to specify the arraysize for `ac/smpplayback~`.
 
@@ -59,7 +59,7 @@ We can wire 1/4" (mono) or 1/8" (stereo) input jacks to the Daisy in the same wa
     <img src="media/stereo_jack_bb.png" width="800" />
 </p>
 
-In addition, we also can use an electret microphone breakout board. This includes a gain boost in order to bring the output of the built-in microphone to line level. Two variations are shown here, one into each channel, but you wouldn't ever use both (at least not so close together):
+In addition, we also can use an electret microphone breakout board. This includes a gain boost in order to bring the output of the built-in microphone to line level:
 
 
 <p align="center">

@@ -19,7 +19,8 @@
        },
        "led3": {
             "component": "Led",
-            "pin": 3
+            "pin": 3,
+            "invert": "false"
        },
        "led0": {
             "component": "UserLed"

@@ -174,11 +174,12 @@ Links an external LED to a toggle object in Pd. This is "output" mode, in which 
 
 ### compile.json
 
-Replace `X` in both places with the appropriate pin. Only analog pins can be used:
+Replace `X` in both places with the appropriate pin. Any GPIO pin can be used. "Inverse" is needed to make the LED light when the toggle is checked:
 ```json
        "ledX": {
             "component": "Led",
-            "pin": X
+            "pin": X,
+            "invert": "false"
        },
 ```
 

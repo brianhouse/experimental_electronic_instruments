@@ -13,8 +13,6 @@ need small breadboards
 solder the powerboosts
 zip ties
 
-some issues with the screenshots and envelopes
-
 link to compile.json (in google docs? download as txt?)
 
 

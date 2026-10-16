@@ -73,7 +73,7 @@ There are also two sliders that we can add to select just a portion of the sampl
 
 Note that if we added messages and a `loadbang`, we could therefore save the loop points so that they load with the patch.
 
-...or we could set the points dynamically. For example, we could use a random start and during triggered by a metro:
+...or we could set the points dynamically. For example, we could use a random start and duration triggered by a metro:
 
 <p align="center">
   <img src="media/random_loop.png" width=600 /><br />
@@ -83,7 +83,7 @@ Note that if we added messages and a `loadbang`, we could therefore save the loo
 Finally, `smpplay~`'s first inlet determines the playback rate. This offers some interesting possibilities. To begin with, you might simply experiment with the sample played at a faster or slower rate. (also note the auto-load of the wav file in this example)
 
 <p align="center">
-  <img src="media/08_10_rate.png" width=600 /><br />
+  <img src="media/rate.png" width=600 /><br />
 </p>
 
 However, by adding our pitch math to the rate calculation, we can create a tuned sampler:
@@ -107,7 +107,7 @@ For example, here's a low-pass filter with the rolloff frequency controlled with
 
 We can, however, also automate a filter change. The right outlet of `ac/smpplay~` gives a value from 0 to 1 corresponding to how far along in the loop playback has progressed. We can use this value to automatically update the cutoff frequency we give to `ac/lpf~`, therefore creating a filter sweep with every loop.
 
-To do this, we use `ac/freqscale~` to rescale our position from `ac/smpplay~`'s right outlet, which is between 0 and 1, to our filter sweep, which is from 50 Hz to 8kHz, with the arguments `ac/freqscale~ 0 1 50 8000`.
+To do this, we use `ac/freqscale` to rescale our position from `ac/smpplay~`'s right outlet, which is between 0 and 1, to our filter sweep, which is from 50 Hz to 8kHz, with the arguments `ac/freqscale 0 1 50 8000`.
 
 <p align="center">
   <img src="media/sweep.png" width=600 /><br />

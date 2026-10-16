@@ -28,19 +28,13 @@ Try making two oscillators with very close frequencies—you'll hear "beating", 
 
 ## AM Synthesis and LFOs
 
-Similarly, multiplication (`*~`) creates even wilder waveforms—in this case, we don't hear one of the oscillators directly, but it is modulating the amplitude (volume) of the other oscillator. For this, we'll use `ac/lfo~ saw`—"LFO" stands for low-frequency oscillator, but there is really no difference between `ac/vco~` and `ac/lfo~` except instead of moving between the full signal range of -1 to 1, it oscillates between 0 to 1 (you can't have a negative amplitude). When multiplied with a signal from `ac/vco~`, this becomes an amplitude adjustment—from zero volume to full (1) volume.
+Similarly, multiplication (`*~`) creates even wilder waveforms—in this case, we don't hear one of the oscillators directly, but it is modulating the amplitude (volume) of the other oscillator. For this, we'll use `ac/lfo~ saw`—"LFO" stands for low-frequency oscillator, but there is really no difference between `ac/vco~` and `ac/lfo~` except instead of moving between the full signal range of -1 to 1, it oscillates between 0 to 1. When multiplied with a signal from `ac/vco~`, this becomes an amplitude adjustment—from zero volume to full (1) volume.
 
 <p align="center">
   <img src="media/AM.png" width=600 /><br />
 </p>
 
-If you set the LFO frequency under 100 Hz or so, you'll notice you get a pulsation effect. To smooth it out and make it into a "tremolo" instead, we can use `ac/lfo~ sin` as a modulator instead of `ac/lfo~ saw`. Like before, the signal moves between 0 and 1 instead of -1 and 1, but it does it with a sine shape instead of a sawtooth:
-
-<p align="center">
-  <img src="media/tremolo.png" width=600 /><br />
-</p>
-
-In general, even though LFOs aren't heard directly, they can change the character of other sounds as well as be used to control larger changes in a patch over time (they are largely the basis of modular synthesizers).
+In general, even though LFOs aren't usually intended to be heard directly, they can change the character of other sounds as well as be used to control larger changes in a patch over time (they are largely the basis of modular synthesizers).
 
 
 ## FM Synthesis
@@ -51,7 +45,7 @@ While AM synthesis changes the amplitude of another signal, Frequency Modulation
   <img src="media/FM_1.png" width=600 /><br />
 </p>
 
-Here, the frequency that we give to `ac/vco~ sin` is determined by another `ac/vco~ sin`. This second oscillator moves between -1 and 1 at 500 times a second, which when multiplied by 2500 is between -1000 and 100 at 500 times a second. The frequency we give to the first oscillator thus becomes a center frequency around which the waveform rapidly oscillates (and even flips the carrier frequency upside down if carrier < modulation). Varying these parameters results in complex waveforms.
+Here, the frequency that we give to `ac/vco~ sin` is determined by another `ac/vco~ sin`. This second oscillator moves between -1 and 1 at 500 times a second, which when multiplied by 1000 is between -1000 and 1000 at 500 times a second. The frequency we give to the first oscillator thus becomes a center frequency around which the waveform rapidly oscillates (and even flips the carrier frequency upside down if carrier < modulation). Varying these parameters results in complex waveforms.
 
 Often, modulation range is expressed as a ratio with the modulation frequency:
 
@@ -78,9 +72,9 @@ To see what the filter is doing, we're going to use `ac/spec~` instead of a scop
   <img src="media/lop.png" width=600 /><br />
 </p>
 
-(The slider in this example has a range of 20–20000, with log turned on)
+(The slider in this example is `ac/slider~`, which outputs a signal from 0 to 1)
 
-Try replacing `noise~` with `ac/vco~ saw`—this is the setup that most hardware synthesizers use to generate their basic timbres. In this case, the filter is smoothing out the upper harmonics of the saw wave in order to produce a more mild timbre.
+Try replacing `noise~` with `ac/vco~ saw` or `ac/vco~ sqr`—this is the setup that most hardware synthesizers use to generate their basic timbres. In this case, the filter is smoothing out the upper harmonics of the saw wave in order to produce a more mild timbre.
 
 <p align="center">
   <img src="media/subtractive.png" width=600 /><br />

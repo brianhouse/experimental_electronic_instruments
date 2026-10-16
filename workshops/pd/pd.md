@@ -117,7 +117,7 @@ Instead of always using both inlets, you can add a default value as a parameter 
 
 Audio signals flow a little differently than messages, because they are continuous—if there is a connection between two audio objects, data is always flowing.
 
-What is an signal object? We know that an object handles signals if its name ends in a tilde ("~"). 
+What is a signal object? We know that an object handles signals if its name ends in a tilde ("~"). 
 
 Add an object box to a new patch, and type `ac/vco~ sin`. This is a sine-wave oscillator.
 
@@ -125,7 +125,7 @@ Add an object box to a new patch, and type `ac/vco~ sin`. This is a sine-wave os
   <img src="media/osc.png" width=400 /><br />
 </p>
 
-Next, connect a `sig~` box upstream to both inlets of an `ac/spkr~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish signal connections from control connections by their dashed lines, and signal inlets and outlets are orange instead of blue.
+Next, connect a `sig~` box upstream and to both inlets of an `ac/spkr~` object downstream (the two inlets are for the right and left channels). Note that you can distinguish signal connections from control connections by their dashed lines, and signal inlets and outlets are orange instead of blue.
 
 You should hear a "pure" synthesized tone.
 
@@ -145,7 +145,7 @@ Note that Pd will prevent you from connecting a signal outlet to a control inlet
 </p>
 
 
-`ac/spkr~` is a digital analog converter—it will make our signal into sound. It has a volume control and a mute button.
+`ac/spkr~` is a digital-to-analog converter—it will make our signal into sound. It has a volume control and a mute button.
 
 
 Let's get a better sense of what's going on here by making a visual output as well. Create an `ac/scope~` object (which is one of the externals we added at the beginning).

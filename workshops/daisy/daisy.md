@@ -211,7 +211,7 @@ The next step is to expand your Pd patch to include a simple oscillator controll
 </p>
 
 
-Note the use of `loadbang` to initialize the oscillator (ACK! a bug in Pd right now means we have to use `sig~` for this instead!); your patch should work without any extra mouse clicks that aren't connected to a Daisy object. Check that it works well on your computer by closing the patch and opening it again. Then repeat the steps above to flash it to your Daisy.
+Your patch should work without any extra mouse clicks that aren't connected to a Daisy object. Check that it works well on your computer by closing the patch and opening it again. Then repeat the steps above to flash it to your Daisy.
 
 To hear it, we're going to need to connect something to `L OUT` on the Daisy. The most straightforward option is to use a 1/4" mono audio jack—aka, a plug for a guitar cable.
 
