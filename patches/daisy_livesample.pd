@@ -20,6 +20,7 @@
 #X obj 496 482 ac/daisyout led 0;
 #X text 515 508 (a recording light);
 #X obj 403 392 ac/daisyin toggle 10;
+#X text 570 163 Live sampling on the Daisy;
 #X connect 1 0 7 0;
 #X connect 3 0 7 0;
 #X connect 4 0 10 0;

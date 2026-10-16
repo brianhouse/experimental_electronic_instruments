@@ -179,6 +179,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 ### Week 9
 
 #### Monday 10/26
+- Workshop: [Arrays: Sampling and Live Input](workshops/daisy/arrays.md)
 - Workshop: [Portable Power and Sound](workshops/daisy/power.md)
 
 #### 5:30PM
