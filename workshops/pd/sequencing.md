@@ -95,15 +95,13 @@ We've already seen how to apply amplitude envelopes to sound in Pd as well as to
 
 However, note that the `ac/spkr~` has two inlets, one each for the right and left channel of a stereo signal. By connecting signals only to one or the other, we can pan them hard left or hard right.
 
-...but for more detailed control, we can use `ac/pan~`. This object takes either a continually varying signal (aka an LFO) or a control value, and routes a mono input to stereo output, adjusting the balance between channels accordingly.
+...but for more detailed control, we can use `ac/pan~`. This object takes either a continually varying signal (aka an LFO) or a static value, and routes a mono input to stereo output, adjusting the balance between channels accordingly.
 
 <p align="center">
-  <img src="media/pan_1.png" width=500 /><br />
+  <img src="media/pan_1.png" width=800 /><br />
 </p>
 
-<p align="center">
-  <img src="media/pan_2.png" width=500 /><br />
-</p>
+(Note that a `ac/slider~` is used above, which outputs a signal instead of a control value)
 
 
 ### Reverb

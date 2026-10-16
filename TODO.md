@@ -1,16 +1,11 @@
 ## now
 
-sliders
-leds
-finish pinout
-loading audio
+the ac/ link should be listed somewhere
+sensors
 
 /
 
 yellow wire, and some stranded kind
-
-
-
 gather headers
 gather micro-USB, and adapters
 
@@ -21,28 +16,6 @@ zip ties
 some issues with the screenshots and envelopes
 
 link to compile.json (in google docs? download as txt?)
-
-
-gotchas:
-- audio input / samples / etc
-- sensors
-
-
-## problems
-
-sig~ is arguably a better paradigm than loadbang anyway
-
-documentation should emphasize links
-
-vco~: frequency (left)
-lfo~: frequency (left)
-lpf~: rolloff (right)
-hpf~: rolloff (right)
-pan~: pan (right)
-dist~: gain (right)
-freqscale~: input (left)
-rescale~: input (left). Lower risk, since people rarely send it a plain number.
-
 
 
 ## materials 
@@ -57,50 +30,34 @@ https://www.amazon.com/Titebond-Woodworking-Furniture-Assembly-Construction/dp/B
 
 ### pd / ac
 
-need line
 
 need switch / spigot / gate
-
 document stairstep lfo
-
 sensitivity of onset should be noted
 
-onset and follower on a sample
-
-timestretch
-
-wavetable with an array
-
-
-more examples of combining live input
-- follower -> lfo
-- follower + onset
-- follower + fm
+more examples:
 - onset to start recording
+- onset and follower on a sample
 
+wavetable synthesis? wavetable with an array
 
-wavetable synthesis?
-
-gain slider
+granular?
 
 amen break patch
 smpplay~ should be able to jump to an index (for amen break)
 
 
-the ac/ link should be listed somewhere
-
 new version allows messages and signal in same inlet, fix smprecord so it's one inlet, smpplay~ so it takes signal for rate. recorder~ left outlet?
 
 
-
+separate "effects" section (move it to include distortion and spatialization)
 delay
 chorus
 glitch
 bit crush
 
-granular
 
-ac/seed ?
+
 
 ### reading
 
