@@ -1,7 +1,27 @@
 ## now
 
-the ac/ link should be listed somewhere
-sensors
+make sure they set to 48k
+
+
+object reference
+option-click vs command-click
+where to find the inspector
+
+
+- linear 12TET dial
+- Todd’s Max book for sequencing
+- delay: delay w/ feedback, lpf; flange; chorus; reverb
+- leave distortion where it is, add bitcrush
+- pan goes to envelopes, add a trigger, it can be moving
+- feedback as an effect
+- footswitch!
+- get a follower example from Charlie, look at Mata’s line input and granular patches
+- timestretch?
+
+
+
+
+==> sensors! test them, order them.
 
 /
 

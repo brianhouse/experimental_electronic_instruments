@@ -8,7 +8,7 @@ Powering the seed from its USB jack might be useful for some things, but it kind
 ### Materials
 - Preexisting Daisy circuit
 - Small breadboard
-- PowerBoost 1000C breakout board
+- PowerBoost 1000C power supply
 - 3.7V 2200mAh rechargable battery
 - Breadboard toggle switch
 - Solid core: red + black
