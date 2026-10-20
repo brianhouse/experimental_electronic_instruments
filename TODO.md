@@ -1,39 +1,27 @@
 ## now
 
-make sure they set to 48k
+==> sensors! test them, order them.
 
 
-object reference
-option-click vs command-click
-where to find the inspector
+soldering
 
 
-- linear 12TET dial
 - Todd’s Max book for sequencing
 - delay: delay w/ feedback, lpf; flange; chorus; reverb
 - leave distortion where it is, add bitcrush
 - pan goes to envelopes, add a trigger, it can be moving
 - feedback as an effect
-- footswitch!
 - get a follower example from Charlie, look at Mata’s line input and granular patches
 - timestretch?
 
 
 
 
-==> sensors! test them, order them.
 
 /
 
 yellow wire, and some stranded kind
-gather headers
-gather micro-USB, and adapters
 
-need small breadboards
-solder the powerboosts
-zip ties
-
-link to compile.json (in google docs? download as txt?)
 
 
 ## materials 
@@ -44,6 +32,8 @@ https://www.amazon.com/Titebond-Woodworking-Furniture-Assembly-Construction/dp/B
 
 
 ## next
+
+move analogies into a whole intro thing
 
 
 ### pd / ac

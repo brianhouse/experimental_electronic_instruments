@@ -11,6 +11,8 @@ All synthesis starts with oscillators. We'll use `ac/vco~` (VCO stands for Volta
   <img src="media/oscillator_shape.png" width=600 /><br />
 </p>
 
+Here, `ac/scope~` shows the waveform of the signal. It's very useful to see what is going on. Likewise, `ac/spec~` (spectrogram) shows the frequency content of the signal, ie, what frequencies are present and how much. (Notice that `ac/spec~` has an orange border—this means that it cannot be used with the Daisy)
+
 With one oscillator, we're limited to fairly simple tones. But by combining oscillations together in different ways, we can get infinitely complex sounds. The classic techniques used for this are called "additive", "AM", "FM", and "subtractive" synthesis.
 
 
@@ -33,6 +35,8 @@ Similarly, multiplication (`*~`) creates even wilder waveforms—in this case, w
 <p align="center">
   <img src="media/AM.png" width=600 /><br />
 </p>
+
+(The example above uses `ac/slider~`. Unlike a regular slider, it outputs a signal from 0 to 1. We can rescale it logarithmically using the `ac/freqscale~` object, which accomplishes the same thing as using properties on the regular slider. That said, `ac/slider~` is slightly smoother.)
 
 In general, even though LFOs aren't usually intended to be heard directly, they can change the character of other sounds as well as be used to control larger changes in a patch over time (they are largely the basis of modular synthesizers).
 
@@ -107,7 +111,7 @@ Note that Pd allows this to becomes a branching process: any number box can be r
 One very useful technique when creating dynamic sounds is to use `ac/lfo~` and rescale its output, which is 0 to 1, to some other useful range. Because we perceive frequency changes nonlinearly, we can use `ac/freqscale~` to map one range to another logarithmically:
 
 <p align="center">
-  <img src="media/automation.png" width=400 /><br />
+  <img src="media/automation.png" width=500 /><br />
 </p>
 
 Replacing all the variable number boxes in a patch with scaled LFOs, you can create a complex oscillator with multiple interacting parts:
@@ -120,8 +124,17 @@ Replacing all the variable number boxes in a patch with scaled LFOs, you can cre
 
 ## Recording a sound file
 
-To record what's happening in your patch, use `ac/recorder~`. This takes two signals, one for each channel, along with an "open" message to choose a path to write to and "start" and "stop" messages to do the thing. `ac/spkr~` has outlets with its two gain-adjusted channels, so you can just connect those right in to `ac/recorder~`.
+To record what's happening in your patch, Pd provides an option, in the upper-right-hand corner:
+
+<p align="center">
+  <img src="media/recording.png" width=400 /><br />
+</p>
+
+Alternatively, you can use `ac/recorder~`. This takes two signals, one for each channel, along with an "open" message to choose a path to write to and "start" and "stop" messages to do the thing. `ac/spkr~` has outlets with its two gain-adjusted channels, so you can just connect those right in to `ac/recorder~`.
 
 <p align="center">
   <img src="media/recorder.png" width=800 /><br />
 </p>
+
+(Notice that `ac/recorder~` has an orange border—this means that it cannot be used with the Daisy)
+

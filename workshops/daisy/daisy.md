@@ -26,16 +26,16 @@ What's the advantage of using a microcontroller over a computer? Rather than bei
 </p>
 
 
-## Circuits
+<!-- ## Circuits
 
 According to the dictionary, in the general sense the word circuit means "a roughly circular line, route, or movement that starts and finishes at the same place." That applies in the electrical sense, too. A circuit is a loop in which electricity is flowing from "power" back to "ground" and making something happen along the way. We typically use `+` (power) and `-` (ground) to indicate which side of the circuit we're on.
 
 <p align="center">
     <img src="media/circuit_loop.png" width="600" />
 </p>
+ -->
 
-
-### An aside for analogies
+<!-- ### An aside for analogies
 
 `Current` is the amount of electricity that is flowing through the circuit. `Voltage` is the "pressure" at any given point. `Resistance` releases some of that pressure (as heat — it's slightly misnamed IMO, should be more like "Dissipator"). This gives us Ohm's law: Current = Voltage / Resistance.
 
@@ -45,7 +45,7 @@ Likewise, in audio, voltage fluctuations correspond to the _shape_ of the sound.
 
 In Pd, the "signal" connections are also analogous to sound / voltage; they are "waves" between -1 and 1 that flow through your objects.
 
-However, most of what we'll do with the Daisy Seed is more like the "control" connections of Pd. In this case, the voltage isn't oscillating like a wave—it's set at constant values that mean something, like if a toggle is on or off, or a slider is set at a particular position. This is where resistance comes into play. Using resistors (which is what a button, knob, or sensor is from an electrical perspective), we can change the voltage at various places in our circuit, measure the result, and use that as data within Pd.
+However, most of what we'll do with the Daisy Seed is more like the "control" connections of Pd. In this case, the voltage isn't oscillating like a wave—it's set at constant values that mean something, like if a toggle is on or off, or a slider is set at a particular position. This is where resistance comes into play. Using resistors (which is what a button, knob, or sensor is from an electrical perspective), we can change the voltage at various places in our circuit, measure the result, and use that as data within Pd. -->
 
 
 ## Pins
@@ -115,7 +115,7 @@ There is basically only one rule when we make connections. And that is that when
 
 ## Breadboard setup
 
-Put the Daisy on the breadboard like in the image below. Pushing the pins into the board can feel a bit scary, be careful but firm.
+Put the Daisy on the breadboard like in the image below. Pushing the pins into the board can feel a bit scary; be careful but firm.
 
 <p align="center">
     <img src="media/setup_bb.png" width="1000" />
@@ -158,13 +158,31 @@ Coming out of the toggle will be another object, `ac/daisyout led 0`. This one c
     <img src="media/hello_1.png" width="400" />
 </p>
 
+### Compiling
+
+#### Windows:
+
+If you're on a Windows machine, you need to do some initial configuring:
+
+0. Download Zadig from zadig.akeo.ie and open it.
+0. Put the Daisy in bootloader mode: hold BOOT, tap RESET.
+0. In Zadig, choose Options → List All Devices.
+0. Pick “DFU in FS Mode” from the dropdown.
+0. Set the target driver to WinUSB and click Replace Driver (or Install Driver).
+
+
+#### Everyone:
+
 Now choose "Compile" under the main menu. Compiling converts our patch into firmware for the Daisy. You should be prompted to install or update your "toolchain" if you haven't already. Go ahead and do this.
 
 <p align="center">
     <img src="media/toolchain.png" width="600" />
 </p>
 
-Then you'll get to the compiler window. Make sure you have "Electro-Smith Daisy" selected, and for the target board, choose "Custom JSON". This should open a dialog box, where you'll select [compile.json](compile.json) that you've downloaded from github via Moodle.
+Then you'll get to the compiler window. Make sure you have the following selected:
+- "Electro-Smith Daisy" in the left-hand panel
+- Target board set to "Custom JSON"; this should open a dialog box, where you'll select [compile.json](compile.json) (sample available on github and Moodle)
+- Patch size set to "Huge + SDRAM"; this lets us use the full capacity of the Daisy
 
 <p align="center">
     <img src="media/compiler.png" width="600" />
@@ -178,7 +196,7 @@ Plug in your Daisy. Notice that it has two buttons, "boot" and "reset" (very sma
 
 Now you're ready. Click Flash and cross your fingers ("flash" means load firmware onto a microcontroller).
 
-If it works, you'll see this (misleading, I know):
+If it works, you may see success. You might also see this (misleading, I know):
 
 <p align="center">
     <img src="media/good_fail.png" width="600" />

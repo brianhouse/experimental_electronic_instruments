@@ -160,10 +160,23 @@ Note that we are working with digital audio—our signal is a series of samples 
 
 One final addition, use the object panel to add a horizontal `slider` leading into the Number box to make it easier to control.
 
-If you click the `slider`, you will see a panel that sets various properties. Set the range of the `slider` to 50–1000, which is a reasonable range for the fundamental frequencies that we might want to hear. Change the "lin" parameter to "log"—frequency works logarithmically, and we want the `slider` to reflect that.
+If you click the `slider`, you will see the inspector panel that sets various properties (it should appear in the right-hand sidebar—if it doesn't, look for the (i) button in the lower right).
+
+<p align="center">
+  <img src="media/inspector_button.png" width=300 /><br />
+</p>
+
+
+Set the range of the `slider` to 50–1000, which is a reasonable range for the fundamental frequencies that we might want to hear. Change the "lin" parameter to "log"—frequency works logarithmically, and we want the `slider` to reflect that.
 
 <p align="center">
   <img src="media/properties.png" width=600 /><br />
+</p>
+
+Alternatively, if you want to think in terms of standard (12 TET) musical tuning, keep it linear and use 0-127 (these are the MIDI notes, ie, every note on a piano (and then some)). To convert a MIDI note into a pitch name, use the `ac/mname` utility object:
+
+<p align="center">
+  <img src="media/midi_names.png" width=700 /><br />
 </p>
 
 Congratulations, you've made your first synthesizer! (Now make sure to save it).
@@ -187,6 +200,7 @@ However, keep in mind that the values in number boxes will not save. If you need
 ## Figuring things out as you go
 
 Some notes on finding your way around:
-- hover your cursor over the inlets and outlets of objects to get info on what they do
+- in edit mode, hover your cursor over the inlets and outlets of objects to get info on what they do
+- hover over signal connections to see what's flowing through them
 - try Option-clicking on an object—if you're in playback mode, it may open up a patch that shows the _contents_ of the object (objects are made of other objects!)
 - Option-clicking while you're in edit mode may open up a helpfile that explains how to use the object
