@@ -173,6 +173,8 @@ If you're on a Windows machine, you need to do some initial configuring:
 
 #### Everyone:
 
+First, make sure your patch is saved.
+
 Now choose "Compile" under the main menu. Compiling converts our patch into firmware for the Daisy. You should be prompted to install or update your "toolchain" if you haven't already. Go ahead and do this.
 
 <p align="center">
