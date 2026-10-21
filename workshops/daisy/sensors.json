@@ -1,0 +1,20 @@
+{
+    "name": "Sensors",
+    "som": "seed",
+    "audio": {
+        "channels": 2
+    },
+    "components": {
+        "toggle10": {
+            "component": "Switch",
+            "pin": 10
+        },
+        "imu": {
+            "component": "Icm20948",
+            "pin": { "scl": 11, "sda": 12 }
+        },
+        "led0": {
+            "component": "UserLed"
+        }
+    }
+}

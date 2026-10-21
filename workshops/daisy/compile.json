@@ -1,29 +1,29 @@
 {
-   "name": "HelloWorld",
-   "som": "seed",
-   "audio": {
-     "channels": 2
-   },
-   "components": {
-       "toggle10": {
-           "component": "Switch",
-           "pin": 10
-       },
-       "bang9": {
+    "name": "HelloWorld",
+    "som": "seed",
+    "audio": {
+        "channels": 2
+    },
+    "components": {
+        "toggle10": {
+            "component": "Switch",
+            "pin": 10
+        },
+        "bang9": {
             "component": "Switch",
             "pin": 9
-       },
-       "slider16": {
-           "component": "AnalogControl",
-           "pin": 16
-       },
-       "led3": {
+        },
+        "slider16": {
+            "component": "AnalogControl",
+            "pin": 16
+        },
+        "led3": {
             "component": "Led",
             "pin": 3,
             "invert": "false"
-       },
-       "led0": {
+        },
+        "led0": {
             "component": "UserLed"
-       }
-   }
+        }
+    }
 }

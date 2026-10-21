@@ -12,9 +12,9 @@ soldering
 - pan goes to envelopes, add a trigger, it can be moving
 - feedback as an effect
 - get a follower example from Charlie, look at Mata’s line input and granular patches
-- timestretch?
 
 
+debugging with terminal
 
 
 
