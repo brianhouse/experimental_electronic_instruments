@@ -1,8 +1,8 @@
 # Envelopes
 
-But sound events in the physical world don't just sound continuously, they have a shape to them. There might be an initial strike, tone, or impact, followed by a quieter section as a vibrating body comes to rest. The timbre might also start off with one character and transition into another. So let's see what we can do with **envelopes**.
+Sound events in the physical world don't just sound continuously, they have a shape to them. There might be an initial strike, tone, or impact, followed by a quieter section as a vibrating body comes to rest. The timbre might also start off with one character and transition into another. So let's see what we can do with **envelopes**.
 
-## Envelopes
+## ADSR
 
 The most typical configuration for an envelope, which you'll see all over the place on synthesizers and software instruments, is a four-stage function known as an ADSR:
 
@@ -47,7 +47,7 @@ Another common use for an envelope is to control the rolloff frequency of a filt
 For this, you'll want to have a wave with lots of harmonics like a saw or square wave (or something more complex) as opposed to a sine wave, which won't have much to filter out.
 
 
-## Sound design with envelopes
+## Monosynth with envelopes
 
 The classic setup that hardware synthesizers use for sound design has three stages:
 
@@ -63,4 +63,21 @@ Each of these sections can be as simple or elaborate as you want it to be, and o
 
 
 One detail: note that we reset the phase of the LFO when the note is triggered. This synchronizes the tremolo with the beginning of the envelope.
+
+
+## Spatialization by panning
+
+We've seen how to apply amplitude envelopes to sound in Pd. But so far, we've mostly been doing this in mono, copying the same signal to both channels / speakers of `ac/spkr~`, or at least sending two distinct signals to each channel.
+
+For more detailed control, we can use `ac/pan~`. This object takes either a continually varying signal (aka an LFO) or a static value, and routes a mono input to stereo output, adjusting the balance between channels accordingly.
+
+Panning is a form of enveloping, as the amplitude of a sound is changing differently in each channel. This is one cue our brains use to place a sound in space, known as "interaural level difference (ILD)" (alongside "interaural timing difference (ITD)" and outer ear / pinna filtering). Panning is therefore used in mixing to provide a sense of space in stereo audio.
+
+
+<p align="center">
+  <img src="media/pan_1.png" width=900 /><br />
+</p>
+
+(Note that a `ac/slider~` is used above, which outputs a signal instead of a control value)
+
 

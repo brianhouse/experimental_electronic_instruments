@@ -89,30 +89,4 @@ Note that this example uses another new object, `<` which outputs a 1 if it rece
 
 Other comparison operator objects are: `>`, `<=`, `>=`, `==` (note the double), and `!=`.
 
-## Spatialization
-
-We've already seen how to apply amplitude envelopes to sound in Pd as well as to "mix" sounds by dividing or multiplying their output by a number to decrease or increase their amplitude.
-
-However, note that the `ac/spkr~` has two inlets, one each for the right and left channel of a stereo signal. By connecting signals only to one or the other, we can pan them hard left or hard right.
-
-...but for more detailed control, we can use `ac/pan~`. This object takes either a continually varying signal (aka an LFO) or a static value, and routes a mono input to stereo output, adjusting the balance between channels accordingly.
-
-<p align="center">
-  <img src="media/pan_1.png" width=800 /><br />
-</p>
-
-(Note that a `ac/slider~` is used above, which outputs a signal instead of a control value)
-
-
-### Reverb
-
-When sound reverberates in a space, it takes on characteristics of that space as its waves bounce off the walls. It's why a small, carpeted office sounds so different than a large concert hall. 
-
-We can simulate this sense of space using "reverb", or in our case, `ac/verb~`. This works by delaying a signal many times and feeding the results back into itself—just like echoes bouncing around a room. `ac/verb~` takes three parameters: the percent mix between the "dry" and "wet" signals, the "feedback" amount, aka the intensity of the reverb, and the high-cut frequency, which simulates how higher frequencies will be absorbed by a room rather than reflected by it.
-
-Note that `ac/verb~` takes a mono signal and outputs a stereo one, distributing the reflections around the stereo field.
-
-<p align="center">
-  <img src="media/reverb.png" width=600 /><br />
-</p>
 

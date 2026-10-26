@@ -5,9 +5,10 @@
 
 soldering
 
+- delay: delay w/ feedback, lpf; flange; chorus; reverb
+
 
 - Todd’s Max book for sequencing
-- delay: delay w/ feedback, lpf; flange; chorus; reverb
 - leave distortion where it is, add bitcrush
 - pan goes to envelopes, add a trigger, it can be moving
 - feedback as an effect
@@ -17,10 +18,7 @@ soldering
 debugging with terminal
 
 
-
-/
-
-yellow wire, and some stranded kind
+separating out the syllabus, so it's tutorial links in the README (+ link to syllabus), documentation of objects in ac/
 
 
 
@@ -37,6 +35,11 @@ move analogies into a whole intro thing
 
 
 ### pd / ac
+
+rename scope~ to trace~ to avoid the collision
+use logscale and linscale as well (we didnt catch that rescale collision)
+
+led0 issue -- what if you want to use pin 0?
 
 
 need switch / spigot / gate
