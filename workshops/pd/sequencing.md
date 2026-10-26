@@ -1,9 +1,9 @@
-# Sequencing (and Spatialization)
+# Sequencing
 
 Now that we know how to create rich sonic material with Pd, we're going to explore how we can structure those sounds over time.
 
 
-## Delay
+## Delayed messages
 
 Envelopes give us the notion of an "event" in time that can be triggered. As we've already seen, in Pd, a "bang" is what makes things happen. There's a lot we can do with bangs, but to start off, we can delay them. Like this:
 
@@ -13,7 +13,7 @@ Envelopes give us the notion of an "event" in time that can be triggered. As we'
 
 The number in `del` tells us how long the delay will be. In this case, it's 1000 milliseconds—or one second. 
 
-Remember that there are two types of signals in Pd. So far, we've mainly been working with audio signals—the stuff that comes out of oscillators. But we've sent a few messages and used loadbang too—these aren't audio, they're "control" signals that tell Pd what to do. Audio objects are, of course, concerned with time, in the sense of building up audio waveforms. But `del` is the first object to demonstrate that control signals have a different notion of time, which functions to cue different things to happen when we want them to.
+Remember that there are two types of connection in Pd. So far, we've mainly been working with audio signals—the stuff that comes out of oscillators. But we've sent a few messages and used loadbang too—these aren't audio, they're "control" messages that tell Pd what to do. Audio objects are, of course, concerned with time, in the sense of building up audio waveforms. But `del` is the first object to demonstrate that control messages have a different notion of time, which functions to cue different things to happen when we want them to.
 
 
 ## Pulsation

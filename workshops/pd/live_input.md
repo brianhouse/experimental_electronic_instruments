@@ -3,7 +3,7 @@
 Now that we can use real-time systems to synthesize sounds, manipulate samples, and sequence and spatialize how audio changes through time, our Pd toolkit is almost complete. The last thing we'll cover is using other forms of input, starting with audio.
 
 
-## Live audio signal
+## Live audio signals
 
 In Pd, create an `ac/mic~` object. This looks strikingly like `ac/spkr~`, except it goes in the opposite direction: instead of inlets, there are two outlets for the left and right channels. Make sure your DSP and Audio are turned on. If you're using your laptop microphone, you should see audio activity in the meter of `ac/mic~`. If you raise the slider, you'll get audio flowing out of one or both of the outlets, depending on whether your input device is mono or stereo. You can connect it directly to an `ac/spkr~` to test, although look out for feedback if you aren't using headphones.
 

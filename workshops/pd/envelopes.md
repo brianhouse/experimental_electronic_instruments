@@ -47,7 +47,7 @@ Another common use for an envelope is to control the rolloff frequency of a filt
 For this, you'll want to have a wave with lots of harmonics like a saw or square wave (or something more complex) as opposed to a sine wave, which won't have much to filter out.
 
 
-## Monosynth with envelopes
+## Classic synth staging
 
 The classic setup that hardware synthesizers use for sound design has three stages:
 

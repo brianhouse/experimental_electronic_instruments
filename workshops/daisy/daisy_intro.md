@@ -48,7 +48,7 @@ In Pd, the "signal" connections are also analogous to sound / voltage; they are 
 However, most of what we'll do with the Daisy Seed is more like the "control" connections of Pd. In this case, the voltage isn't oscillating like a wave—it's set at constant values that mean something, like if a toggle is on or off, or a slider is set at a particular position. This is where resistance comes into play. Using resistors (which is what a button, knob, or sensor is from an electrical perspective), we can change the voltage at various places in our circuit, measure the result, and use that as data within Pd. -->
 
 
-## Pins
+## Pinout
 
 The legs of the Daisy are connection points, called pins.
 

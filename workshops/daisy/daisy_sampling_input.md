@@ -3,7 +3,7 @@
 Just like on the desktop, we can work with arrays on the Daisy. There are a few important caveats, however, that we will discuss in this section.
 
 
-## Playing Samples
+## Loading and Playing Samples
 
 The Daisy can play back prerecorded samples that are saved with the patch. However, `ac/smpload` will not compile, so we need to put it in a separate patch that only lives on the desktop; Pd patches can communicate between windows.
 

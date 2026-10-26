@@ -46,7 +46,7 @@ Export the track as a WAV file, and save it in your Pd folder. **rename the trac
 </p>
 
 
-## Manipulating samples in Pd
+## Manipulating samples
 
 Pd stores samples (in both senses) in data structures called arrays. Create an array by using the object browser. Using the info pane, give it a unique name, and note that you can specify the default number of samples (in the data sense). To find this number, multiply the number of seconds you want times the sample rate (eg, 48000).
 
@@ -95,7 +95,7 @@ However, by adding our pitch math to the rate calculation, we can create a tuned
 You could also make a series of messages with different frequency and/or pitch values and bang those with a sequencer.
 
 
-## Using samples as audio signals
+## Samples as audio signals
 
 The left outlet of `ac/smpplay~` is an audio signal, and rather than connect it directly to `ac/spkr~`, you can use it as an input to any kind of synthesis, whether AM, FM, subtractive, or whatever else.
 

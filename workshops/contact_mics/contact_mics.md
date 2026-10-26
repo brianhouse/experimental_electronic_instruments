@@ -48,18 +48,6 @@
 ![](media/contact_mic_16.jpg)
 
 
-## Use
-
-Your contact mic may be used as an external input to the DR-05X via the jack at the top of the unit between the built-in mics.
-
-The contact mic is just a single signal, so you'll want to switch to "MONO" under "Menu → REC SETTING → TYPE" on your recorder (remember to switch it back if you're going to return to the built-in mics!).
-
-Other than that, all the same recording procedures apply as in the standard [recording_checklist](../workshops/recording_checklist.md).
-
-However, note that contact mics can produce a very "hot"—ie, loud—signal, which can easily clip and be harmful to your ears. Always **start with low gain** to avoid this.
-
-![](media/mono.jpg)
-
 
 ## How it works
 

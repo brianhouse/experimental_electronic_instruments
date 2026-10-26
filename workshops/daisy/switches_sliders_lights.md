@@ -1,4 +1,4 @@
-# Hardware Interfaces: Switches + Sliders (and Lights)
+# Switches + Sliders (and Lights)
 
 The Daisy allows us to integrate physical versions of the bangs, toggles, and sliders in our patches.
 
