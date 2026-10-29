@@ -142,9 +142,9 @@ Links a dial or other variable resistor to a slider object in Pd. Receive a stre
 
 Replace `X` in both places with the appropriate pin. Only analog pins can be used:
 ```json
-       "slider15": {
+       "sliderX": {
            "component": "AnalogControl",
-           "pin": 15
+           "pin": X
        },
 ```
 

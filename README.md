@@ -74,11 +74,10 @@ The library of compileable, Pd-vanilla objects used in the workshops.
     - [Loading and playing samples](workshops/daisy/daisy_sampling_input.md#loading-and-playing-samples)
     - [Recording samples](workshops/daisy/daisy_sampling_input.md#recording-samples)
 - [Basic sensors](workshops/daisy/basic_sensors.md)
-    - FSRs
-    - Photocells
-    - Sound level
+    - [Photocell](workshops/daisy/basic_sensors.md#photocell)
+    - [Force-Sensitive-Resistor](workshops/daisy/basic_sensors.md#FSR)
 - [Digital sensors](workshops/daisy/digital_sensors.md)
-    - IMUs
+    - [IMU](workshops/daisy/digital_sensors.md#IMU)
     - Capacitive touch
     - Proximity
 

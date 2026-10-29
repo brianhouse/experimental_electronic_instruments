@@ -225,6 +225,7 @@ If all goes well, push the button. You should see a light on the Daisy turn on.
 Alternative with Windows:
 - Flash just the bootloader
 then, 
+- Back to regular flash
 - Press RESET
 - While the LED is pulsing, press BOOT once. A few rapid blinks confirm it’s now waiting indefinitely.
 - Hit compile/flash in plugdata whenever

@@ -6,10 +6,10 @@
 - Michel Waisvisz, "Cracklebox" (1975)
 - David Rokeby, "Very Nervous System" (1982–1991)
 - Rafael Lozano-Hemmer, "Pulse Room" (2006)
-- Jeff Mills, "Exhibitionist Mix 3: TR-909 Workout" (https://www.youtube.com/watch?v=eU-UsvYbIV0) (2004)
+- Jeff Mills, ["Exhibitionist Mix 3: TR-909 Workout"](https://www.youtube.com/watch?v=eU-UsvYbIV0) (2004)
 - Merche Blasco, "Espongina" (2013)
-- MSHR, various (https://mshr.info/MSHRinstruments.html) (2011)
-- Peter Bussigel, "ndial" (https://www.triangleline.com/projects/ndial) (2015)
+- MSHR, [various](https://mshr.info/MSHRinstruments.html) (2011)
+- Peter Bussigel, ["ndial"](https://www.triangleline.com/projects/ndial) (2015)
 - Atau Tanaka, "BioMuse" (1989)
 - Pamela Z, "BodySynth" (1994)
 - Victoria Shen (Evicshen), "Needle Nails" (2021)
@@ -26,6 +26,7 @@
 - Wintergatan, "Marble Machine" (2016)
 - Leon Theremin and Clara Rockmore, The Theremin (1920)
 - Imogen Heap, "Mi.Mu Gloves" (2010)
+- Daito Manabe, ["Electric Stimulus to Face"](https://www.youtube.com/watch?v=pLAma-lrJRM) (2009)
 
 
 If you want to add to this list, send me an email to approve.
