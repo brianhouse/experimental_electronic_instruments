@@ -9,9 +9,9 @@
             "component": "Switch",
             "pin": 10
         },
-        "imu": {
-            "component": "Icm20948",
-            "pin": { "scl": 11, "sda": 12 }
+        "prox": {
+            "component": "Apds9960",
+            "pin": { "sda": 12, "scl": 11 }
         },
         "led0": {
             "component": "UserLed"

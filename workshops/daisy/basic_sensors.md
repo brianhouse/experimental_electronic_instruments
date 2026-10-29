@@ -1,8 +1,8 @@
 # Basic Sensors
 
-A potentiometer is a straightforward way to capture variable information and use it to control a slider in Pd. However, many sensors behave exactly the same way electrically while opening up different possibilities for interaction.
+A potentiometer is a straightforward way to capture variable information and use it to control a slider in Pd. However, many sensors behave exactly the same way electrically (as a "voltage divider") while opening up different possibilities for interaction.
 
-For all of these sensors, use this for your `compile.json`:
+For all of these sensors, use this in the "components" section of your `compile.json`:
 ```json
        "sliderX": {
            "component": "AnalogControl",
@@ -16,6 +16,11 @@ For all of these sensors, use this for your `compile.json`:
     <img src="media/daisy_slider_pd.png" width="400" />
 </p>
 
+And here's the pinout for reference:
+
+<p align="center">
+    <img src="media/daisy_pinout.jpg" width="600" />
+</p>
 
 
 

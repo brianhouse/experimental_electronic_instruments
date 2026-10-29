@@ -79,7 +79,6 @@ The library of compileable, Pd-vanilla objects used in the workshops.
 - [Digital sensors](workshops/daisy/digital_sensors.md)
     - [IMU](workshops/daisy/digital_sensors.md#IMU)
     - Capacitive touch
-    - Proximity
 
 
 ### Other
