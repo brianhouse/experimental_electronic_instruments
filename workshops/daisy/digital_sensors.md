@@ -46,4 +46,6 @@ Connect `ac/imu` to several sliders (adjust their ranges in properties):
 Wire the VIN to `+`, GND to `-`, and the `SDA` and `SCL` pins on the IMU to the respective pins on the Daisy.
 
 
-<!-- fritz diagram goes here -->
+<p align="center">
+    <img src="media/imu_bb.png" width="800" />
+</p>
