@@ -180,17 +180,14 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 #### Monday 10/26
 - Workshop: [Sampling with the Daisy](workshops/daisy/daisy_sampling_input.md)
-- Workshop: [Portable Power and Sound](workshops/daisy/batteries_and_amp.md)
 
 #### 5:30PM
 - Rapaport Lecture, An-My Lê Moses, Pruyne Lecture Hall (Fayerweather 115)
 
 
-
 #### Wednesday 10/28
 - Presentations #7
 - Reading due: Atau Tanaka, ["Musical Performance Practice on Sensor-Based Instruments"](readings/tanaka_sensors.pdf) (2000)
-- Workshop: [Sensors](workshops/daisy/basic_sensors.md)
 - Exercise for next class: [Prototype](exercises/prototype.md)
  
 
@@ -198,26 +195,28 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 #### Monday 11/2
 - Present Prototype exercise
-- Workshop: Laser cutting
-- Exercise for end of next class: [Object](exercises/object.md)
+- Workshop: [Sensors](workshops/daisy/basic_sensors.md)
+
 
 #### Wednesday 11/4
 - Presentations #8
 - Reading due: Don Norman, ["The Psychopathology of Everyday Things"](readings/norman_affordances.pdf) (1988)
-- Laser workshop continued
-- Present Object exercise
+- Workshop: Laser cutting
+- Exercise for next class: [Object](exercises/object.md)
 
 
 ### Week 11
 
 #### Monday 11/9
 - Presentations #9
-- Final project proposal due
+- Present Object exercise
+
 
 #### Wednesday 11/11
 - Presentations #10
 - Reading due: George Lewis, ["Too Many Notes: Computers, Complexity and Culture in Voyager"](readings/lewis_voyager.pdf) (2000)
-- Questions and work time
+- Workshop: [Portable Power and Sound](workshops/daisy/batteries_and_amp.md)
+
 
 #### Thursday 11/12 @ 5PM
 - Alison Moses artist talk, Pruyne Lecture Hall (Fayerweather 115)
@@ -228,10 +227,11 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 #### Monday 11/16
 - Presentations #11
 - Questions and work time
+- Final project proposal due
+
 
 #### Wednesday 11/18
 - Presentations #12
-- Final project prototype critique
 
 
 ### THANKSGIVING BREAK
@@ -240,7 +240,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 ### Week 13
 
 #### Monday 11/30
-- Questions and work time
+- Final project prototype critique
 
 #### Wednesday 12/2
 - Reading due: Alex Galloway, ["The Unworkable Interface"](readings/galloway_interface.pdf) (2012)
