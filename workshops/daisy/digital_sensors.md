@@ -50,7 +50,7 @@ Wire the VIN to `+`, GND to `-`, and the `SDA` and `SCL` pins on the IMU to the 
     <img src="media/imu_bb.png" width="800" />
 </p>
 
-## Capacitive Touch ([object](https://github.com/brianhouse/ac/blob/main/cap.pd), [help](https://github.com/brianhouse/ac/blob/main/cap-help.pd))
+## Capacitance ([object](https://github.com/brianhouse/ac/blob/main/cap.pd), [help](https://github.com/brianhouse/ac/blob/main/cap-help.pd))
 
 With the Mpr121 sensor, a change in capacitance at any of the pad pin ends controls a toggle in Pd. In other words, wire something conductive to the pin, and then touch it with your finger or some other conductive material. You get 12 custom toggle switches in one!
 

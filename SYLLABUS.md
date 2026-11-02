@@ -195,7 +195,8 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 
 #### Monday 11/2
 - Present Prototype exercise
-- Workshop: [Sensors](workshops/daisy/basic_sensors.md)
+- Workshop: [Basic sensors](workshops/daisy/basic_sensors.md)
+- Workshop: [Digital sensors](workshops/daisy/digital_sensors.md)
 
 
 #### Wednesday 11/4

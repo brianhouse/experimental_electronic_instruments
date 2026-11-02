@@ -78,7 +78,7 @@ The library of compileable, Pd-vanilla objects used in the workshops.
     - [Force-Sensitive-Resistor](workshops/daisy/basic_sensors.md#FSR)
 - [Digital sensors](workshops/daisy/digital_sensors.md)
     - [IMU](workshops/daisy/digital_sensors.md#IMU)
-    - Capacitive touch
+    - [Capacitance](workshops/daisy/digital_sensors.md#capacitance)
 
 
 ### Fabrication
