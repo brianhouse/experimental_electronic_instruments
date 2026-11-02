@@ -11,7 +11,7 @@ Here's the pinout for reference:
 
 
 
-## IMU
+## IMU ([object](https://github.com/brianhouse/ac/blob/main/imu.pd), [help](https://github.com/brianhouse/ac/blob/main/imu-help.pd))
 
 An "inertial measurement unit sensor" includes an accelerometer, gyroscope, and magnetometer to determine how it is oriented in space.
 
@@ -48,4 +48,37 @@ Wire the VIN to `+`, GND to `-`, and the `SDA` and `SCL` pins on the IMU to the 
 
 <p align="center">
     <img src="media/imu_bb.png" width="800" />
+</p>
+
+## Capacitive Touch ([object](https://github.com/brianhouse/ac/blob/main/cap.pd), [help](https://github.com/brianhouse/ac/blob/main/cap-help.pd))
+
+With the Mpr121 sensor, a change in capacitance at any of the pad pin ends controls a toggle in Pd. In other words, wire something conductive to the pin, and then touch it with your finger or some other conductive material. You get 12 custom toggle switches in one!
+
+
+### compile.json
+
+Use SDA and SCL pins:
+```json
+        "cap": {
+            "component": "Mpr121",
+            "mapping": [{"name": "{name}", "get": "(float){class_name}.{name}.Touched()", "where": "main"}]
+        },
+```
+
+### Pd
+
+Connect `ac/cap` to several toggles:
+
+
+<p align="center">
+    <img src="media/cap.png" width="800" />
+</p>
+
+### Daisy
+
+Wire the VIN to `+`, GND to `-`, and the `SDA` and `SCL` pins on the sensor to the respective pins on the Daisy. For each of the pad pins, add a bare wire and/or connect it to something conductive.
+
+
+<p align="center">
+    <img src="media/cap_bb.png" width="800" />
 </p>

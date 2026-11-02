@@ -13,6 +13,10 @@
             "component": "Apds9960",
             "pin": { "sda": 12, "scl": 11 }
         },
+        "cap": {
+            "component": "Mpr121",
+            "mapping": [{"name": "{name}", "get": "(float){class_name}.{name}.Touched()", "where": "main"}]
+        },
         "led0": {
             "component": "UserLed"
         }
