@@ -81,7 +81,7 @@ The library of compileable, Pd-vanilla objects used in the workshops.
     - Capacitive touch
 
 
-### Other
-- [Soldering](workshops/soldering/soldering.md)
-- [Contact Mics](workshops/contact_mics/contact_mics.md)
-
+### Fabrication
+- [Soldering](workshops/fabrication/soldering.md)
+- [Vector drawing](workshops/fabrication/vector_drawing.md)
+- [Laser cutting](workshops/fabrication/laser_cutting.md)

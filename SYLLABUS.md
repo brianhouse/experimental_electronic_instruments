@@ -201,7 +201,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 #### Wednesday 11/4
 - Presentations #8
 - Reading due: Don Norman, ["The Psychopathology of Everyday Things"](readings/norman_affordances.pdf) (1988)
-- Workshop: Laser cutting
+- Workshop: [Vector drawing](workshops/fabrication/vector_drawing.md) and [Laser cutting](workshops/fabrication/laser_cutting.md)
 - Exercise for next class: [Object](exercises/object.md)
 
 

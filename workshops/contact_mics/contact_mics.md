@@ -35,7 +35,7 @@
 ![](media/contact_mic_10.jpg)
 1. Do the same with the black wire on the piezo and the outer wire on the cable.
 ![](media/contact_mic_11.jpg)
-1. [Solder](../soldering/soldering.md) both of these joints together.
+1. [Solder](../fabrication/soldering.md) both of these joints together.
 ![](media/contact_mic_12.jpg)
 1. Turn the soldering station off.
 1. Wrap a small piece of electrical tape around both joints so that no bare wire is showing.
