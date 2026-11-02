@@ -211,12 +211,14 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 #### Monday 11/9
 - Presentations #9
 - Present Object exercise
+- Workshop: [Portable Power and Sound](workshops/daisy/batteries_and_amp.md)
 
 
 #### Wednesday 11/11
 - Presentations #10
 - Reading due: George Lewis, ["Too Many Notes: Computers, Complexity and Culture in Voyager"](readings/lewis_voyager.pdf) (2000)
-- Workshop: [Portable Power and Sound](workshops/daisy/batteries_and_amp.md)
+- [Start Final Projects](projects/final.md)
+- Questions and work time
 
 
 #### Thursday 11/12 @ 5PM
