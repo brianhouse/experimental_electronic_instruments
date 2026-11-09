@@ -21,8 +21,7 @@ Please follow the procedure below carefully—it's important to use this machine
 1. Make sure that:
     - "Medium Draftboard" is indicated as the material in the upper-left corner of the interface
     - Your design is positioned on a clear portion of Draftboard (do your best to minimize the use of space while keeping a small margin at the edges)
-    - The layers panel indicates the appropriate function (CUT, SCORE, ENGRAVE) for each part of your design  
-    (If you need to change the function, select the object, copy it, and then right-click and select "paste as a new step". It will now appear as a new step on the left tab and you may change its operation. Be sure to delete the original object.)  
+    - The layers panel indicates your chosen function (CUT, SCORE, ENGRAVE) for each part of your design (different parts are determined by different colors in your .svg file) 
 1. Once you are ready, click "Print".
 1. Look at the time estimate: if this is longer than 20 minutes or so, consider modifying your design.
 

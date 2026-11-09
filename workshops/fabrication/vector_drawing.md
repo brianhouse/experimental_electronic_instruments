@@ -25,11 +25,23 @@ Make note of the "snapping" menu in the upper-right corner, which will be helpfu
 Use + (actually =) and - on your keyboard to zoom in and out.
 
 
+## Layers and Laser settings
+
+Different colors in your .svg will be treated as different layers in the Glowforge interface. While we're just making cuts, everything should be the same color.
+
+However, you also have the option to "score". This is when the laser doesn't fully cut through the material, which is useful for making diagrams and decorations on the surface of your instrument. Choose a different line color for lines you want to score so that they show up on their own layer in Glowforge, for which you can select scoring.
+
+Additionally, there is an option, "engrave". Because this uses a lot of resources (time, laser, filter, etc), we will avoid engraving, except for when it is helpful attaching parts, such as with the 3" speaker below. For these sections, you'll use a different color as a fill, indicating the area to be engraved.
+
+
+
+
 ## Examples
 
 1. Holes that fit a panel pushbutton, a panel switch, and a potentiometer/knob: [switches_slider.svg](cuts/switches_slider.svg)
 1. Holes that fit a 5mm and 8mm LEDs: [leds.svg](cuts/leds.svg)
 1. Box demonstrating puzzle sides: [box.svg](cuts/box.svg)
+1. 3" speaker: [speaker.svg](cuts/speaker.svg)
 
 
 
