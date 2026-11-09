@@ -167,7 +167,7 @@ If you're on a Windows machine, you need to do some initial configuring:
 0. Download Zadig from zadig.akeo.ie and open it.
 0. Put the Daisy in bootloader mode: hold BOOT, tap RESET.
 0. In Zadig, choose Options → List All Devices.
-0. Pick “DFU in FS Mode” from the dropdown.
+0. Pick “DFU in FS Mode” or “Daisy Seed built-in”  from the dropdown.
 0. Set the target driver to WinUSB and click Replace Driver (or Install Driver).
 
 
@@ -220,17 +220,19 @@ Anything else means there's something wrong with the patch. Scroll up in the err
 
 If all goes well, push the button. You should see a light on the Daisy turn on.
 
-<!--
 
-Alternative with Windows:
-- Flash just the bootloader
-then, 
-- Back to regular flash
-- Press RESET
-- While the LED is pulsing, press BOOT once. A few rapid blinks confirm it’s now waiting indefinitely.
-- Hit compile/flash in plugdata whenever
+#### Windows:
 
--->
+If flashing is not working for you and you're on windows, try the following:
+
+0. Flash just the bootloader (this is a Pd compile option)
+0. Change back to regular Flash in Pd compile
+
+From then on, instead of doing the standard button sequence,
+
+0. Press RESET
+0. While the LED is pulsing, press BOOT once. A few rapid blinks confirm it’s now waiting
+0. Flash your patch
 
 
 
