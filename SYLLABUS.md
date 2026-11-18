@@ -243,6 +243,7 @@ Our college is named after a white colonizer and is built in the Kwinitekw Valle
 ### Week 13
 
 #### Monday 11/30
+- Alec and Gabe presentations
 - Final project prototype critique
 
 #### Wednesday 12/2
