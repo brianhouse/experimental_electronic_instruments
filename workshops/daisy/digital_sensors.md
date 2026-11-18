@@ -41,6 +41,13 @@ Connect `ac/imu` to several sliders (adjust their ranges in properties):
     <img src="media/imu.png" width="800" />
 </p>
 
+In many cases, you may want to know how far the imu is tilted in a given direction. For this, connect the tilt direction and tilt amount outputs to `ac/tilt`, which will then give you a single number to work with.
+
+<p align="center">
+    <img src="media/tilt.png" width="600" />
+</p>
+
+
 ### Daisy
 
 Wire the VIN to `+`, GND to `-`, and the `SDA` and `SCL` pins on the IMU to the respective pins on the Daisy.

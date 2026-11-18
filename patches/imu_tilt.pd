@@ -1,0 +1,16 @@
+#N canvas 827 239 734 620 12;
+#X obj 120 157 ac/imu;
+#X obj 120 256 sig~;
+#X obj 120 300 ac/freqscale~ 0 90 200 1000;
+#X obj 120 344 ac/vco~ sin;
+#X obj 120 394 ac/spkr~;
+#X obj 120 213 ac/tilt 90;
+#X text 213 212 argument is target direction;
+#X text 213 255 output is amount of tilt toward the target;
+#X connect 0 0 5 0;
+#X connect 0 1 5 1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 1 0;
