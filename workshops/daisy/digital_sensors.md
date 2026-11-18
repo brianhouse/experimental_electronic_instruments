@@ -57,6 +57,34 @@ Wire the VIN to `+`, GND to `-`, and the `SDA` and `SCL` pins on the IMU to the 
     <img src="media/imu_bb.png" width="800" />
 </p>
 
+
+### A second IMU ([object](https://github.com/brianhouse/ac/blob/main/imu2.pd))
+
+To use two IMUs, a few things need to happen.
+
+1. On the Icm20948 itself, to make it work as a second IMU, you need to solder a jumper connection on back. Add a dolop of solder to the two heated pads to make them connect, as shown:
+<p align="center">
+    <img src="media/imu2.png" width="200" />
+</p>
+<p align="center">
+    <img src="media/imu2_soldered.png" width="200" />
+</p>
+
+2. In `compile.json`, add:
+```json
+        "imu2": {
+            "component": "Icm20948",
+            "pin": { "sda": 12, "scl": 11 },
+            "address": "0x68"
+        },
+```
+3. In your patch, use `ac/imu2` for the second IMU.
+
+<p align="center">
+    <img src="media/double_imu.png" width="600" />
+</p>
+
+
 ## Capacitance ([object](https://github.com/brianhouse/ac/blob/main/cap.pd), [help](https://github.com/brianhouse/ac/blob/main/cap-help.pd))
 
 With the Mpr121 sensor, a change in capacitance at any of the pad pin ends controls a toggle in Pd. In other words, wire something conductive to the pin, and then touch it with your finger or some other conductive material. You get 12 custom toggle switches in one!
